@@ -1,6 +1,6 @@
 package metro.controller.schema;
 
-public class SuperAdmin {
+public class SuperAdminData {
     public String id;
     public String name;
     public String city;
