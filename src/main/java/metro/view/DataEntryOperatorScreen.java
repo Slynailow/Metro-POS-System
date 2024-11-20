@@ -41,6 +41,16 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
         SystemNameLb2 = new javax.swing.JLabel();
         SloganLb2 = new javax.swing.JLabel();
         ChangePasswordLbNav = new javax.swing.JLabel();
+        OldPasswordFd = new javax.swing.JPasswordField();
+        NewPasswordFd = new javax.swing.JPasswordField();
+        ConfirmPasswordFd = new javax.swing.JPasswordField();
+        OldPasswordLb = new javax.swing.JLabel();
+        NewPasswordLb = new javax.swing.JLabel();
+        ConfirmPassswordLb = new javax.swing.JLabel();
+        SeparatorOne = new javax.swing.JSeparator();
+        SeparatorTwo = new javax.swing.JSeparator();
+        SeparatorThree = new javax.swing.JSeparator();
+        ChangeBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("METRO - Data Entry Operator Menu");
@@ -279,6 +289,69 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
         ChangePasswordLbNav.setForeground(new java.awt.Color(153, 153, 255));
         ChangePasswordLbNav.setText("Change Password Window");
 
+        OldPasswordFd.setBackground(new java.awt.Color(255, 255, 255));
+        OldPasswordFd.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        OldPasswordFd.setForeground(new java.awt.Color(1, 146, 213));
+        OldPasswordFd.setText("jPasswordField1");
+        OldPasswordFd.setBorder(null);
+        OldPasswordFd.setPreferredSize(new java.awt.Dimension(160, 55));
+        OldPasswordFd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                OldPasswordFdActionPerformed(evt);
+            }
+        });
+
+        NewPasswordFd.setBackground(new java.awt.Color(255, 255, 255));
+        NewPasswordFd.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        NewPasswordFd.setForeground(new java.awt.Color(1, 146, 213));
+        NewPasswordFd.setText("jPasswordField1");
+        NewPasswordFd.setBorder(null);
+        NewPasswordFd.setPreferredSize(new java.awt.Dimension(160, 55));
+
+        ConfirmPasswordFd.setBackground(new java.awt.Color(255, 255, 255));
+        ConfirmPasswordFd.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        ConfirmPasswordFd.setForeground(new java.awt.Color(1, 146, 213));
+        ConfirmPasswordFd.setText("jPasswordField1");
+        ConfirmPasswordFd.setBorder(null);
+        ConfirmPasswordFd.setPreferredSize(new java.awt.Dimension(160, 55));
+        ConfirmPasswordFd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ConfirmPasswordFdActionPerformed(evt);
+            }
+        });
+
+        OldPasswordLb.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        OldPasswordLb.setForeground(new java.awt.Color(51, 51, 51));
+        OldPasswordLb.setText("Old Password");
+
+        NewPasswordLb.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        NewPasswordLb.setForeground(new java.awt.Color(51, 51, 51));
+        NewPasswordLb.setText("New Password");
+
+        ConfirmPassswordLb.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        ConfirmPassswordLb.setForeground(new java.awt.Color(51, 51, 51));
+        ConfirmPassswordLb.setText("Confirm Password");
+
+        SeparatorOne.setForeground(new java.awt.Color(51, 51, 255));
+
+        SeparatorTwo.setForeground(new java.awt.Color(51, 51, 255));
+
+        SeparatorThree.setForeground(new java.awt.Color(51, 51, 255));
+
+        ChangeBtn.setBackground(new java.awt.Color(1, 146, 213));
+        ChangeBtn.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        ChangeBtn.setForeground(new java.awt.Color(255, 255, 255));
+        ChangeBtn.setText("Change");
+        ChangeBtn.setPreferredSize(new java.awt.Dimension(150, 50));
+        ChangeBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                ChangeBtnMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                ChangeBtnMouseExited(evt);
+            }
+        });
+
         javax.swing.GroupLayout ChangePasswordPanelLayout = new javax.swing.GroupLayout(ChangePasswordPanel);
         ChangePasswordPanel.setLayout(ChangePasswordPanelLayout);
         ChangePasswordPanelLayout.setHorizontalGroup(
@@ -287,13 +360,43 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
                 .addGap(44, 44, 44)
                 .addGroup(ChangePasswordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(ChangePasswordPanelLayout.createSequentialGroup()
-                        .addComponent(SloganLb2)
-                        .addContainerGap(454, Short.MAX_VALUE))
-                    .addGroup(ChangePasswordPanelLayout.createSequentialGroup()
                         .addComponent(SystemNameLb2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 216, Short.MAX_VALUE)
                         .addComponent(ChangePasswordLbNav)
-                        .addGap(16, 16, 16))))
+                        .addGap(16, 16, 16))
+                    .addGroup(ChangePasswordPanelLayout.createSequentialGroup()
+                        .addComponent(SloganLb2)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addGroup(ChangePasswordPanelLayout.createSequentialGroup()
+                .addGap(96, 96, 96)
+                .addGroup(ChangePasswordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(ChangeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(ChangePasswordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(ChangePasswordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(ChangePasswordPanelLayout.createSequentialGroup()
+                                .addComponent(OldPasswordLb)
+                                .addGap(71, 71, 71)
+                                .addComponent(OldPasswordFd, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(ChangePasswordPanelLayout.createSequentialGroup()
+                                .addComponent(NewPasswordLb)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(ChangePasswordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(ChangePasswordPanelLayout.createSequentialGroup()
+                                        .addGap(6, 6, 6)
+                                        .addComponent(SeparatorTwo))
+                                    .addComponent(NewPasswordFd, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(ChangePasswordPanelLayout.createSequentialGroup()
+                                .addComponent(ConfirmPassswordLb)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(ChangePasswordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(ChangePasswordPanelLayout.createSequentialGroup()
+                                        .addGap(6, 6, 6)
+                                        .addComponent(SeparatorThree))
+                                    .addComponent(ConfirmPasswordFd, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(ChangePasswordPanelLayout.createSequentialGroup()
+                            .addGap(230, 230, 230)
+                            .addComponent(SeparatorOne, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         ChangePasswordPanelLayout.setVerticalGroup(
             ChangePasswordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -306,7 +409,27 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
                         .addComponent(ChangePasswordLbNav)))
                 .addGap(28, 28, 28)
                 .addComponent(SloganLb2)
-                .addContainerGap(894, Short.MAX_VALUE))
+                .addGap(159, 159, 159)
+                .addGroup(ChangePasswordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(OldPasswordFd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(OldPasswordLb))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(SeparatorOne, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24)
+                .addGroup(ChangePasswordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(NewPasswordFd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(NewPasswordLb))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(SeparatorTwo, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24)
+                .addGroup(ChangePasswordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ConfirmPasswordFd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ConfirmPassswordLb))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(SeparatorThree, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(54, 54, 54)
+                .addComponent(ChangeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(361, Short.MAX_VALUE))
         );
 
         RightPanel.add(ChangePasswordPanel, "card4");
@@ -387,6 +510,22 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
         LogOutBtn.setBackground(new Color(1, 146, 213));
     }//GEN-LAST:event_LogOutBtnMouseExited
 
+    private void ConfirmPasswordFdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfirmPasswordFdActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ConfirmPasswordFdActionPerformed
+
+    private void OldPasswordFdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OldPasswordFdActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_OldPasswordFdActionPerformed
+
+    private void ChangeBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ChangeBtnMouseEntered
+        ChangeBtn.setBackground(Color.red);
+    }//GEN-LAST:event_ChangeBtnMouseEntered
+
+    private void ChangeBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ChangeBtnMouseExited
+        ChangeBtn.setBackground(new Color(1,146,213));
+    }//GEN-LAST:event_ChangeBtnMouseExited
+
     
     
     
@@ -423,18 +562,28 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ChangeBtn;
     private javax.swing.JButton ChangePasswordBtn;
     private javax.swing.JLabel ChangePasswordLbNav;
     private javax.swing.JPanel ChangePasswordPanel;
+    private javax.swing.JLabel ConfirmPassswordLb;
+    private javax.swing.JPasswordField ConfirmPasswordFd;
     private javax.swing.JPanel LeftPanel;
     private javax.swing.JButton LogOutBtn;
+    private javax.swing.JPasswordField NewPasswordFd;
+    private javax.swing.JLabel NewPasswordLb;
     private javax.swing.JButton NewVendorBtn;
     private javax.swing.JLabel NewVendorNavLb;
     private javax.swing.JPanel NewVendorPanel;
+    private javax.swing.JPasswordField OldPasswordFd;
+    private javax.swing.JLabel OldPasswordLb;
     private javax.swing.JButton OldVendorBtn;
     private javax.swing.JLabel OldVendorNavLb;
     private javax.swing.JPanel OldVendorPanel;
     private javax.swing.JPanel RightPanel;
+    private javax.swing.JSeparator SeparatorOne;
+    private javax.swing.JSeparator SeparatorThree;
+    private javax.swing.JSeparator SeparatorTwo;
     private javax.swing.JLabel SloganLb;
     private javax.swing.JLabel SloganLb1;
     private javax.swing.JLabel SloganLb2;
