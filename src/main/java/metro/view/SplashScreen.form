@@ -55,6 +55,11 @@
       </Layout>
       <SubComponents>
         <Component class="javax.swing.JProgressBar" name="LoadingBar">
+          <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="99" green="99" red="ff" type="rgb"/>
+            </Property>
+          </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="0" y="480" width="900" height="20"/>
@@ -113,7 +118,7 @@
         <Component class="javax.swing.JLabel" name="HeroImage">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\it\Downloads\4.png"/>
+              <Image iconType="2" name="C:\Users\it\Downloads\Assets\MainVectorSc.png"/>
             </Property>
           </Properties>
           <Constraints>
@@ -125,7 +130,7 @@
         <Component class="javax.swing.JLabel" name="BackgroundImage">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\it\Downloads\BackgroundImage.png"/>
+              <Image iconType="2" name="C:\Users\it\Downloads\Assets\BackgroundImage.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="jLabel2"/>
           </Properties>

@@ -1,19 +1,17 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
-package com.mycompany.metro;
+
+package com.mycompany.metrosystem.view;
 
 import java.awt.Image;
 import javax.swing.ImageIcon;
+import com.mycompany.metrosystem.controller.LoginController;
 
 public class LoginScreen extends javax.swing.JFrame {
 
-    /**
-     * Creates new form LoginScreen
-     */
+    LoginController lc;
     public LoginScreen() {
         initComponents();
+        lc=new LoginController(this);
+        setVisible(true);
     }
     
     @SuppressWarnings("unchecked")
@@ -41,7 +39,6 @@ public class LoginScreen extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Login - Metro POS");
-        setPreferredSize(new java.awt.Dimension(1000, 700));
         setResizable(false);
 
         Background.setBackground(new java.awt.Color(245, 247, 242));
@@ -102,12 +99,12 @@ public class LoginScreen extends javax.swing.JFrame {
         ComanyLb.setText("© 2024 Slynailow. All rights reserved.");
         LeftPanel.add(ComanyLb, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 630, -1, -1));
 
-        UserNameLb.setIcon(new javax.swing.ImageIcon("C:\\Users\\it\\Downloads\\user.png")); // NOI18N
+        UserNameLb.setIcon(new javax.swing.ImageIcon("C:\\Users\\it\\Downloads\\Assets\\user.png")); // NOI18N
         UserNameLb.setText("jLabel2");
         UserNameLb.setPreferredSize(new java.awt.Dimension(32, 32));
         LeftPanel.add(UserNameLb, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 380, -1, -1));
 
-        PasswordLb.setIcon(new javax.swing.ImageIcon("C:\\Users\\it\\Downloads\\password.png")); // NOI18N
+        PasswordLb.setIcon(new javax.swing.ImageIcon("C:\\Users\\it\\Downloads\\Assets\\password.png")); // NOI18N
         PasswordLb.setText("jLabel1");
         PasswordLb.setPreferredSize(new java.awt.Dimension(32, 32));
         LeftPanel.add(PasswordLb, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 450, -1, -1));
@@ -127,7 +124,7 @@ public class LoginScreen extends javax.swing.JFrame {
         SystemNameLb.setText("METRO Point Of Sale System");
         LeftPanel.add(SystemNameLb, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, -1, -1));
 
-        logoLb.setIcon(new javax.swing.ImageIcon("C:\\Users\\it\\Downloads\\logo.png")); // NOI18N
+        logoLb.setIcon(new javax.swing.ImageIcon("C:\\Users\\it\\Downloads\\Assets\\logo.png")); // NOI18N
         logoLb.setText("jLabel1");
         logoLb.setPreferredSize(new java.awt.Dimension(64, 64));
         LeftPanel.add(logoLb, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, -1, -1));
@@ -135,7 +132,7 @@ public class LoginScreen extends javax.swing.JFrame {
         UserTypeCb.setBackground(new java.awt.Color(1, 146, 213));
         UserTypeCb.setFont(new java.awt.Font("Century Gothic", 0, 22)); // NOI18N
         UserTypeCb.setForeground(new java.awt.Color(255, 255, 255));
-        UserTypeCb.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Admin", "Data Entry Operator", "Cashier" }));
+        UserTypeCb.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Admin", "Branch Manager", "Data Entry Operator", "Cashier" }));
         UserTypeCb.setBorder(null);
         UserTypeCb.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         UserTypeCb.setFocusable(false);
@@ -144,15 +141,15 @@ public class LoginScreen extends javax.swing.JFrame {
         Sp3.setForeground(new java.awt.Color(102, 255, 51));
         LeftPanel.add(Sp3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 350, 410, 20));
 
-        UserTypeLb.setIcon(new javax.swing.ImageIcon("C:\\Users\\it\\Downloads\\userType.png")); // NOI18N
+        UserTypeLb.setIcon(new javax.swing.ImageIcon("C:\\Users\\it\\Downloads\\Assets\\userType.png")); // NOI18N
         UserTypeLb.setText("jLabel1");
         UserTypeLb.setPreferredSize(new java.awt.Dimension(32, 32));
         LeftPanel.add(UserTypeLb, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, -1, -1));
 
         Background.add(LeftPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 700));
 
-        MainVectorLb.setIcon(new javax.swing.ImageIcon("C:\\Users\\it\\Downloads\\loginPageMainVector.png")); // NOI18N
-        Background.add(MainVectorLb, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 170, -1, -1));
+        MainVectorLb.setIcon(new javax.swing.ImageIcon("C:\\Users\\it\\Downloads\\Assets\\loginPageMainVector.png")); // NOI18N
+        Background.add(MainVectorLb, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 170, 300, 350));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -180,12 +177,30 @@ public class LoginScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_PasswordFdActionPerformed
 
     private void LoginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginBtnActionPerformed
-        // TODO add your handling code here:
+          LoginController lg= new LoginController(this);
+          lg.handleLogin();
     }//GEN-LAST:event_LoginBtnActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    public String getUsername() {
+        return UserNameFd.getText();
+    }
+
+    public String getPassword() {
+        return new String(PasswordFd.getPassword());
+    }
+
+    public String getUserType() {
+        return UserTypeCb.getSelectedItem().toString();
+    }
+
+    public void displayMessage(String message) {
+        javax.swing.JOptionPane.showMessageDialog(this, message);
+    }
+
+    
+    
+    
+    
     public static void main(String args[]) 
     {
         /* Set the Nimbus look and feel */
@@ -214,7 +229,9 @@ public class LoginScreen extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new LoginScreen().setVisible(true);
+//                LoginScreen loginScreen = new LoginScreen();
+//        new LoginController(loginScreen);
+//        loginScreen.setVisible(true);
             }
         });
     }
@@ -223,7 +240,7 @@ public class LoginScreen extends javax.swing.JFrame {
     private javax.swing.JPanel Background;
     private javax.swing.JLabel ComanyLb;
     private javax.swing.JPanel LeftPanel;
-    private javax.swing.JButton LoginBtn;
+    public javax.swing.JButton LoginBtn;
     private javax.swing.JLabel MainVectorLb;
     private javax.swing.JPasswordField PasswordFd;
     private javax.swing.JLabel PasswordLb;
