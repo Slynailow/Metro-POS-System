@@ -1,4 +1,4 @@
-package com.mycompany.metro;
+package com.mycompany.metrosystem.view;
 
 import javax.swing.SwingUtilities;
 
@@ -13,6 +13,45 @@ public class SplashScreen extends javax.swing.JFrame {
     public SplashScreen() {
         initComponents();
     }
+    
+    public void startLoading()
+    {
+        try{
+            
+            for(int i=0;i<=100;i++)
+            {
+                Thread.sleep(10);
+                LoadingValue.setText(i+" %");
+                
+                if(i==10)
+                {
+                    LoadingLabel.setText("Loading reports and statistics");
+                }
+                else if(i==30)
+                {
+                    LoadingLabel.setText("Loading products and stocks");
+                }
+                else if(i==70)
+                {
+                    LoadingLabel.setText("Loading several Modules");
+                }
+                else if(i==100)
+                {
+                   LoadingLabel.setText("Loading Complete! Thanks for your Patience!");
+                }
+              LoadingBar.setValue(i);
+            }
+            dispose();
+            LoginScreen lc = new LoginScreen();
+            lc.setVisible(true);
+        }catch(Exception e)
+        {
+            e.printStackTrace();
+            
+        }
+        
+    }
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -31,6 +70,8 @@ public class SplashScreen extends javax.swing.JFrame {
         Background.setBackground(new java.awt.Color(0, 255, 255));
         Background.setPreferredSize(new java.awt.Dimension(900, 500));
         Background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        LoadingBar.setForeground(new java.awt.Color(255, 153, 153));
         Background.add(LoadingBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 480, 900, 20));
 
         ProjectName.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
@@ -49,10 +90,10 @@ public class SplashScreen extends javax.swing.JFrame {
         LoadingValue.setText("0 %");
         Background.add(LoadingValue, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 450, -1, -1));
 
-        HeroImage.setIcon(new javax.swing.ImageIcon("C:\\Users\\it\\Downloads\\4.png")); // NOI18N
+        HeroImage.setIcon(new javax.swing.ImageIcon("C:\\Users\\it\\Downloads\\Assets\\MainVectorSc.png")); // NOI18N
         Background.add(HeroImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, -50, -1, -1));
 
-        BackgroundImage.setIcon(new javax.swing.ImageIcon("C:\\Users\\it\\Downloads\\BackgroundImage.png")); // NOI18N
+        BackgroundImage.setIcon(new javax.swing.ImageIcon("C:\\Users\\it\\Downloads\\Assets\\BackgroundImage.png")); // NOI18N
         BackgroundImage.setText("jLabel2");
         Background.add(BackgroundImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -90, 980, 680));
 
@@ -93,48 +134,12 @@ public class SplashScreen extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(SplashScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(SplashScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+        } 
         
-        SplashScreen sc = new SplashScreen();
-        sc.setVisible(true);
+//        SplashScreen sc = new SplashScreen();
+//        sc.setVisible(true);
+//        sc.startLoading();
         
-        try{
-            
-            for(int i=0;i<=100;i++)
-            {
-                Thread.sleep(100);
-                sc.LoadingValue.setText(i+" %");
-                
-                if(i==10)
-                {
-                    sc.LoadingLabel.setText("Loading reports and statistics");
-                }
-                else if(i==30)
-                {
-                    sc.LoadingLabel.setText("Loading products and stocks");
-                }
-                else if(i==70)
-                {
-                    sc.LoadingLabel.setText("Loading several Modules");
-                }
-                else if(i==100)
-                {
-                    sc.LoadingLabel.setText("Loading Complete! Thanks for your Patience!");
-                }
-                sc.LoadingBar.setValue(i);
-            }
-            sc.dispose();
-            LoginScreen lc = new LoginScreen();
-            lc.setVisible(true);
-        }catch(Exception e)
-        {
-            e.printStackTrace();
-            
-        }
-        
-
-      
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
