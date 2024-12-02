@@ -45,7 +45,12 @@ public class LoginController {
         {
             loginScreen.displayMessage("Login successful");
             loginScreen.dispose();
-            UserFrameFactory.getUserFrame(userType,username).setVisible(true);
+            String branchCode = loginModel.getBranchCode(userType,username, password);
+            if (branchCode == null) {
+                loginScreen.displayMessage("Branch code could not be retrieved");
+                return;
+            }
+            UserFrameFactory.getUserFrame(userType,username, branchCode).setVisible(true);
         } else {
             loginScreen.displayMessage("Invalid credentials");
         }
