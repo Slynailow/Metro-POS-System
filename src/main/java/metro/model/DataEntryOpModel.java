@@ -15,7 +15,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class DataEntryOpModel {
+public class DataEntryOpModel 
+{
     private Connection conn;
 
     public DataEntryOpModel() throws SQLException, ClassNotFoundException {
@@ -72,56 +73,84 @@ public class DataEntryOpModel {
         }
     }
 
-    // Method to add a new product
-public boolean addProduct(String productId, String productName, String category, double salePrice, 
-                           double pricePerCaton, double pricePerUnit, double originalPrice, String vendorId) 
-                           throws SQLException {
+    public boolean addProduct(String productId, String productName, String category, double salePrice, 
+                           double pricePerCaton, double pricePerUnit, double originalPrice, String vendorId, 
+                           int quantity, String branchCode) throws SQLException {
+
     // First, check if the vendorId exists in the Vendor table
     String vendorCheckQuery = "SELECT COUNT(*) FROM Vendor WHERE id = ?";
-    
     try (PreparedStatement checkStmt = conn.prepareStatement(vendorCheckQuery)) {
         checkStmt.setString(1, vendorId);
-        
         try (ResultSet rs = checkStmt.executeQuery()) {
-            // If no vendor exists with the given id, return false
             if (rs.next() && rs.getInt(1) == 0) {
                 return false; // Vendor doesn't exist
             }
         }
     }
-    String productCheckQuery = "SELECT COUNT(*) FROM Product WHERE id = ?";
+
+    // Check if the product already exists for the given productId and branchCode
+    String productCheckQuery = "SELECT quantity, salePrice, pricePerUnit, pricePerCarton, originalPrice FROM Product WHERE id = ? AND branchCode = ?";
     
     try (PreparedStatement checkStmt = conn.prepareStatement(productCheckQuery)) {
         checkStmt.setString(1, productId);
+        checkStmt.setString(2, branchCode);
         
         try (ResultSet rs = checkStmt.executeQuery()) {
-            // If a product already exists with the same productId, return false
-            if (rs.next() && rs.getInt(1) > 0) {
-                return false; // Product ID already exists
+            if (rs.next()) {
+                // If product exists, update the quantity and overwrite the prices
+                int existingQuantity = rs.getInt("quantity");
+                double existingSalePrice = rs.getDouble("salePrice");
+                double existingPricePerUnit = rs.getDouble("pricePerUnit");
+                double existingPricePerCarton = rs.getDouble("pricePerCarton");
+                double existingOriginalPrice = rs.getDouble("originalPrice");
+
+                // Update the quantity (add the new quantity to the existing quantity)
+                int updatedQuantity = existingQuantity + quantity;
+
+                // Overwrite the prices with the new values
+                double updatedSalePrice = salePrice != existingSalePrice ? salePrice : existingSalePrice;
+                double updatedPricePerUnit = pricePerUnit != existingPricePerUnit ? pricePerUnit : existingPricePerUnit;
+                double updatedPricePerCarton = pricePerCaton != existingPricePerCarton ? pricePerCaton : existingPricePerCarton;
+                double updatedOriginalPrice = originalPrice != existingOriginalPrice ? originalPrice : existingOriginalPrice;
+
+                // Update the quantity and prices for the existing product
+                String updateQuery = "UPDATE Product SET quantity = ?, salePrice = ?, pricePerUnit = ?, pricePerCarton = ?, originalPrice = ? WHERE id = ? AND branchCode = ?";
+                try (PreparedStatement updateStmt = conn.prepareStatement(updateQuery)) {
+                    updateStmt.setInt(1, updatedQuantity); // Update quantity
+                    updateStmt.setDouble(2, updatedSalePrice); // Overwrite sale price
+                    updateStmt.setDouble(3, updatedPricePerUnit); // Overwrite price per unit
+                    updateStmt.setDouble(4, updatedPricePerCarton); // Overwrite price per carton
+                    updateStmt.setDouble(5, updatedOriginalPrice); // Overwrite original price
+                    updateStmt.setString(6, productId);
+                    updateStmt.setString(7, branchCode);
+                    updateStmt.executeUpdate();
+                    return true; // Return true if the update was successful
+                }
             }
         }
     }
 
-    // If vendor exists, proceed with adding the product
-    String query = "INSERT INTO Product (id, name, category, salePrice, pricePerCarton, pricePerUnit, originalPrice, vendorId) " +
-                   "VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+    // If product doesn't exist, insert a new product into the Product table
+    String insertQuery = "INSERT INTO Product (id, name, category, salePrice, pricePerCarton, pricePerUnit, originalPrice, vendorId, quantity, branchCode) " +
+                         "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
     
-    try (PreparedStatement stmt = conn.prepareStatement(query)) {
-        // Set parameters for the prepared statement
+    try (PreparedStatement stmt = conn.prepareStatement(insertQuery)) {
         stmt.setString(1, productId);
         stmt.setString(2, productName);
         stmt.setString(3, category);
-        stmt.setDouble(4, salePrice);
-        stmt.setDouble(5, pricePerCaton);
-        stmt.setDouble(6, pricePerUnit);
-        stmt.setDouble(7, originalPrice);
+        stmt.setDouble(4, salePrice); // Set sale price for the new product
+        stmt.setDouble(5, pricePerCaton); // Set price per carton for the new product
+        stmt.setDouble(6, pricePerUnit); // Set price per unit for the new product
+        stmt.setDouble(7, originalPrice); // Set original price for the new product
         stmt.setString(8, vendorId);
+        stmt.setInt(9, quantity); // The computed quantity in units
+        stmt.setString(10, branchCode); // Branch code to associate with this product
         
-        // Execute the query and check if a record was inserted
         int result = stmt.executeUpdate();
         return result > 0; // Return true if the insert was successful
     }
 }
+
     // Method to change password with proper authentication
     public boolean changePassword(String userName, String oldPassword, String newPassword) throws SQLException {
     // First, verify that the username and old password match

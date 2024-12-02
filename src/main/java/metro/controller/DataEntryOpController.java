@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.metrosystem.controller;
 
 import com.mycompany.metrosystem.model.DataEntryOpModel;
@@ -54,8 +50,7 @@ public class DataEntryOpController {
     }
 
     // Method to handle the Add Product action
-   public boolean addProduct()
-   {
+    public boolean addProduct() {
     String productId = view.getProductId();
     String productName = view.getProductName();
     String productCategory = view.getSelectedProductCategory();
@@ -64,11 +59,14 @@ public class DataEntryOpController {
     String pricePerCatonStr = view.getPricePerCaton();
     String pricePerUnitStr = view.getPricePerUnit();
     String originalPriceStr = view.getOriginalPrice();
+    String quantityType = view.getSelectedQuantityType();
+    String actualQuantityStr = view.getActualQuantity();
+    String branchCode = view.getBranchCode();
 
     // Check if any field is empty or null
     if (productId.isEmpty() || productName.isEmpty() || productCategory.isEmpty() ||
         salePriceStr.isEmpty() || vendorId == null || pricePerCatonStr.isEmpty() || 
-        pricePerUnitStr.isEmpty() || originalPriceStr.isEmpty()) {
+        pricePerUnitStr.isEmpty() || originalPriceStr.isEmpty() || actualQuantityStr.isEmpty()) {
         JOptionPane.showMessageDialog(view, "Please fill all the fields.");
         return false;
     }
@@ -79,21 +77,28 @@ public class DataEntryOpController {
         double pricePerCaton = Double.parseDouble(pricePerCatonStr);
         double pricePerUnit = Double.parseDouble(pricePerUnitStr);
         double originalPrice = Double.parseDouble(originalPriceStr);
+        int actualQuantity = Integer.parseInt(actualQuantityStr); // Actual quantity entered by the user
 
-        // Call the model's addProduct method with all parameters
-        if (model.addProduct(productId, productName, productCategory, salePrice, 
-                             pricePerCaton, pricePerUnit, originalPrice, vendorId)) {
+        // Compute the quantity based on quantityType
+        int quantityInUnits = 0;
+        if (quantityType.equals("Unit")) {
+            quantityInUnits = actualQuantity;
+        } else if (quantityType.equals("Carton")) {
+            quantityInUnits = actualQuantity * 12; // Convert cartons to units (12 units per carton)
+        }
+
+        // Call the model's addProduct method with all parameters, including quantity and branchCode
+        if (model.addProduct(productId, productName, productCategory, salePrice,
+                             pricePerCaton, pricePerUnit, originalPrice, vendorId, quantityInUnits, branchCode)) {
             JOptionPane.showMessageDialog(view, "Product added successfully.");
             return true;
         } else {
-            JOptionPane.showMessageDialog(view, "Make sure the vendor Id exists and Product Id is unique");
+            JOptionPane.showMessageDialog(view, "Make sure the vendor Id exists and Product Id is unique or properly updated.");
         }
     } catch (NumberFormatException e) {
         JOptionPane.showMessageDialog(view, "Invalid number format in one or more fields.");
-        
     } catch (SQLException e) {
         JOptionPane.showMessageDialog(view, "Error adding product: " + e.getMessage());
-        
     }
     return false;
 }
@@ -157,5 +162,7 @@ public class DataEntryOpController {
         JOptionPane.showMessageDialog(view, "Error loading vendor IDs: " + e.getMessage());
     }
     }
-
+    
+    
+    
 }
