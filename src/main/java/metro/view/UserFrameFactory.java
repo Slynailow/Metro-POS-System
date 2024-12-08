@@ -4,14 +4,14 @@ import javax.swing.JFrame;
 
 public class UserFrameFactory {
 
-    public static JFrame getUserFrame(String userType,String userName) {
+    public static JFrame getUserFrame(String userType,String userName, String branchCode) {
         switch (userType) {
             case "Admin":
                 return new AdminScreen();
             case "Data Entry Operator":
-                return new DataEntryOperatorScreen(userName);
+                return new DataEntryOperatorScreen(userName,branchCode);
             case "Cashier":
-                return new CashierScreen();
+                return new CashierScreen(userName,branchCode);
             case "Branch Manager":
                 return new BranchManagerScreen();
                 

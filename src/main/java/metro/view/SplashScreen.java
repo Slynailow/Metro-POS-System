@@ -20,7 +20,7 @@ public class SplashScreen extends javax.swing.JFrame {
             
             for(int i=0;i<=100;i++)
             {
-                Thread.sleep(10);
+                Thread.sleep(70);
                 LoadingValue.setText(i+" %");
                 
                 if(i==10)
