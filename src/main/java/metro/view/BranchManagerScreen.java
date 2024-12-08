@@ -908,7 +908,7 @@ public class BranchManagerScreen extends javax.swing.JFrame {
 
         pack();
         setLocationRelativeTo(null);
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
     private void myinit() {
         ChangePasswordPanel.setVisible(true);
@@ -917,65 +917,33 @@ public class BranchManagerScreen extends javax.swing.JFrame {
         userDetailsLb.setText("Greetings " + userName + " Branch ID : " + branchCode);
     }
 
-    private void logoutBtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_logoutBtnActionPerformed
+    private void logoutBtnActionPerformed(java.awt.event.ActionEvent evt) {
         dispose();
-    }// GEN-LAST:event_logoutBtnActionPerformed
+    }
 
-    private void changePasswordBtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_changePasswordBtnActionPerformed
+    private void changePasswordBtnActionPerformed(java.awt.event.ActionEvent evt) {
         ChangePasswordPanel.setVisible(true);
         AddDataOperatorPanel.setVisible(false);
         AddCashierPanel.setVisible(false);
-    }// GEN-LAST:event_changePasswordBtnActionPerformed
+    }
 
-    private void OldPasswordFdActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_OldPasswordFdActionPerformed
-
-    }// GEN-LAST:event_OldPasswordFdActionPerformed
-
-    private void ConfirmPasswordFdActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_ConfirmPasswordFdActionPerformed
-        // TODO add your handling code here:
-    }// GEN-LAST:event_ConfirmPasswordFdActionPerformed
-
-    private void ChangeBtnMouseEntered(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_ChangeBtnMouseEntered
+    private void ChangeBtnMouseEntered(java.awt.event.MouseEvent evt) {
         ChangeBtn.setBackground(Color.red);
-    }// GEN-LAST:event_ChangeBtnMouseEntered
+    }
 
-    private void ChangeBtnMouseExited(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_ChangeBtnMouseExited
+    private void ChangeBtnMouseExited(java.awt.event.MouseEvent evt) {
         ChangeBtn.setBackground(new Color(1, 146, 213));
-    }// GEN-LAST:event_ChangeBtnMouseExited
+    }
 
-    private void ChangeBtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_ChangeBtnActionPerformed
+    private void ChangeBtnActionPerformed(java.awt.event.ActionEvent evt) {
         controller.handleChangePassword(userName);
-    }// GEN-LAST:event_ChangeBtnActionPerformed
+    }
 
-    private void cashierEmailTfActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_cashierEmailTfActionPerformed
-        // TODO add your handling code here:
-    }// GEN-LAST:event_cashierEmailTfActionPerformed
-
-    private void cashierPasswordTfActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_cashierPasswordTfActionPerformed
-        // TODO add your handling code here:
-    }// GEN-LAST:event_cashierPasswordTfActionPerformed
-
-    private void cashierSalaryTfActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_cashierSalaryTfActionPerformed
-        // TODO add your handling code here:
-    }// GEN-LAST:event_cashierSalaryTfActionPerformed
-
-    private void operatorEmailTfActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_operatorEmailTfActionPerformed
-        // TODO add your handling code here:
-    }// GEN-LAST:event_operatorEmailTfActionPerformed
-
-    private void operatorPasswordTfActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_operatorPasswordTfActionPerformed
-        // TODO add your handling code here:
-    }// GEN-LAST:event_operatorPasswordTfActionPerformed
-
-    private void operatorSalaryTfActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_operatorSalaryTfActionPerformed
-        // TODO add your handling code here:
-    }// GEN-LAST:event_operatorSalaryTfActionPerformed
-
-    private void addOperatorBtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_addOperatorBtnActionPerformed
+    private void addOperatorBtnActionPerformed(java.awt.event.ActionEvent evt) {
         AddDataOperatorPanel.setVisible(true);
         AddCashierPanel.setVisible(false);
         ChangePasswordPanel.setVisible(false);
-    }// GEN-LAST:event_addOperatorBtnActionPerformed
+    }
 
     public String getOldPassword() {
         return new String(OldPasswordFd.getPassword());
@@ -1062,15 +1030,7 @@ public class BranchManagerScreen extends javax.swing.JFrame {
     }// GEN-LAST:event_submitCashierBtnActionPerformed
 
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        // <editor-fold defaultstate="collapsed" desc=" Look and feel setting code
-        // (optional) ">
-        /*
-         * If Nimbus (introduced in Java SE 6) is not available, stay with the default
-         * look and feel.
-         * For details see
-         * http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
-         */
+
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -1091,9 +1051,7 @@ public class BranchManagerScreen extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(BranchManagerScreen.class.getName()).log(java.util.logging.Level.SEVERE,
                     null, ex);
         }
-        // </editor-fold>
 
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 // new BranchManagerScreen().setVisible(true);
@@ -1101,7 +1059,6 @@ public class BranchManagerScreen extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel AddCashierPanel;
     private javax.swing.JPanel AddDataOperatorPanel;
     private javax.swing.JButton ChangeBtn;
@@ -1165,5 +1122,5 @@ public class BranchManagerScreen extends javax.swing.JFrame {
     private javax.swing.JButton submitCashierBtn;
     private javax.swing.JButton submitOperatorBtn;
     private javax.swing.JLabel userDetailsLb;
-    // End of variables declaration//GEN-END:variables
+
 }
