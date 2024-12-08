@@ -1,4 +1,4 @@
-package com.mycompany.metrosystem.view;
+package metro.view;
 
 import javax.swing.*;
 import java.awt.*;

@@ -7,53 +7,43 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JProgressBar;
 
-
 public class SplashScreen extends javax.swing.JFrame {
-    
+
     public SplashScreen() {
         initComponents();
     }
-    
-    public void startLoading()
-    {
-        try{
-            
-            for(int i=0;i<=100;i++)
-            {
+
+    public void startLoading() {
+        try {
+
+            for (int i = 0; i <= 100; i++) {
                 Thread.sleep(70);
-                LoadingValue.setText(i+" %");
-                
-                if(i==10)
-                {
+                LoadingValue.setText(i + " %");
+
+                if (i == 10) {
                     LoadingLabel.setText("Loading reports and statistics");
-                }
-                else if(i==30)
-                {
+                } else if (i == 30) {
                     LoadingLabel.setText("Loading products and stocks");
-                }
-                else if(i==70)
-                {
+                } else if (i == 70) {
                     LoadingLabel.setText("Loading several Modules");
+                } else if (i == 100) {
+                    LoadingLabel.setText("Loading Complete! Thanks for your Patience!");
                 }
-                else if(i==100)
-                {
-                   LoadingLabel.setText("Loading Complete! Thanks for your Patience!");
-                }
-              LoadingBar.setValue(i);
+                LoadingBar.setValue(i);
             }
             dispose();
             LoginScreen lc = new LoginScreen();
             lc.setVisible(true);
-        }catch(Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
-            
+
         }
-        
+
     }
-    
+
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         Background = new javax.swing.JPanel();
@@ -74,51 +64,50 @@ public class SplashScreen extends javax.swing.JFrame {
         LoadingBar.setForeground(new java.awt.Color(255, 153, 153));
         Background.add(LoadingBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 480, 900, 20));
 
-        ProjectName.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+        ProjectName.setFont(new java.awt.Font("Century Gothic", 1, 36));
         ProjectName.setForeground(new java.awt.Color(0, 51, 51));
         ProjectName.setText("Metro Point of Sale System");
         ProjectName.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         Background.add(ProjectName, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 370, -1, 40));
 
-        LoadingLabel.setFont(new java.awt.Font("Century Gothic", 0, 20)); // NOI18N
+        LoadingLabel.setFont(new java.awt.Font("Century Gothic", 0, 20));
         LoadingLabel.setForeground(new java.awt.Color(0, 51, 51));
         LoadingLabel.setText("Loading......");
         Background.add(LoadingLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 450, -1, -1));
 
-        LoadingValue.setFont(new java.awt.Font("Century Gothic", 0, 20)); // NOI18N
+        LoadingValue.setFont(new java.awt.Font("Century Gothic", 0, 20));
         LoadingValue.setForeground(new java.awt.Color(0, 51, 51));
         LoadingValue.setText("0 %");
         Background.add(LoadingValue, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 450, -1, -1));
 
-        HeroImage.setIcon(new javax.swing.ImageIcon("C:\\Users\\it\\Downloads\\Assets\\MainVectorSc.png")); // NOI18N
+        HeroImage.setIcon(new javax.swing.ImageIcon("C:\\Users\\it\\Downloads\\Assets\\MainVectorSc.png"));
         Background.add(HeroImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, -50, -1, -1));
 
-        BackgroundImage.setIcon(new javax.swing.ImageIcon("C:\\Users\\it\\Downloads\\Assets\\BackgroundImage.png")); // NOI18N
+        BackgroundImage.setIcon(new javax.swing.ImageIcon("C:\\Users\\it\\Downloads\\Assets\\BackgroundImage.png"));
         BackgroundImage.setText("jLabel2");
         Background.add(BackgroundImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -90, 980, 680));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(Background, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addComponent(Background, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE)));
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(Background, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addComponent(Background, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE)));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    public static void main(String args[]) 
-    {
-        
+    public static void main(String args[]) {
+
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -127,19 +116,23 @@ public class SplashScreen extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(SplashScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SplashScreen.class.getName()).log(java.util.logging.Level.SEVERE, null,
+                    ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(SplashScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SplashScreen.class.getName()).log(java.util.logging.Level.SEVERE, null,
+                    ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(SplashScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SplashScreen.class.getName()).log(java.util.logging.Level.SEVERE, null,
+                    ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(SplashScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } 
-        
-//        SplashScreen sc = new SplashScreen();
-//        sc.setVisible(true);
-//        sc.startLoading();
-        
+            java.util.logging.Logger.getLogger(SplashScreen.class.getName()).log(java.util.logging.Level.SEVERE, null,
+                    ex);
+        }
+
+        // SplashScreen sc = new SplashScreen();
+        // sc.setVisible(true);
+        // sc.startLoading();
+
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -8,14 +8,16 @@ import com.mycompany.metrosystem.controller.LoginController;
 public class LoginScreen extends javax.swing.JFrame {
 
     LoginController lc;
+
     public LoginScreen() {
         initComponents();
-        lc=new LoginController(this);
+        lc = new LoginController(this);
         setVisible(true);
     }
-    
+
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         Background = new javax.swing.JPanel();
@@ -50,7 +52,7 @@ public class LoginScreen extends javax.swing.JFrame {
         LeftPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         UserNameFd.setBackground(new java.awt.Color(1, 146, 213));
-        UserNameFd.setFont(new java.awt.Font("Century Gothic", 0, 22)); // NOI18N
+        UserNameFd.setFont(new java.awt.Font("Century Gothic", 0, 22));
         UserNameFd.setForeground(new java.awt.Color(255, 255, 255));
         UserNameFd.setText("Username");
         UserNameFd.setBorder(null);
@@ -62,7 +64,7 @@ public class LoginScreen extends javax.swing.JFrame {
         LeftPanel.add(UserNameFd, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 370, 410, 50));
 
         PasswordFd.setBackground(new java.awt.Color(1, 146, 213));
-        PasswordFd.setFont(new java.awt.Font("Century Gothic", 0, 22)); // NOI18N
+        PasswordFd.setFont(new java.awt.Font("Century Gothic", 0, 22));
         PasswordFd.setForeground(new java.awt.Color(255, 255, 255));
         PasswordFd.setText("Password");
         PasswordFd.setBorder(null);
@@ -74,7 +76,7 @@ public class LoginScreen extends javax.swing.JFrame {
         LeftPanel.add(PasswordFd, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 450, 410, 32));
 
         LoginBtn.setBackground(new java.awt.Color(255, 255, 255));
-        LoginBtn.setFont(new java.awt.Font("Century Gothic", 1, 22)); // NOI18N
+        LoginBtn.setFont(new java.awt.Font("Century Gothic", 1, 22));
         LoginBtn.setForeground(new java.awt.Color(1, 146, 221));
         LoginBtn.setText("Login");
         LoginBtn.setToolTipText("Click to validate credentials");
@@ -94,45 +96,46 @@ public class LoginScreen extends javax.swing.JFrame {
         Sp2.setForeground(new java.awt.Color(102, 255, 51));
         LeftPanel.add(Sp2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 420, 410, 20));
 
-        ComanyLb.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        ComanyLb.setFont(new java.awt.Font("Century Gothic", 0, 18));
         ComanyLb.setForeground(new java.awt.Color(255, 255, 255));
         ComanyLb.setText("© 2024 Slynailow. All rights reserved.");
         LeftPanel.add(ComanyLb, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 630, -1, -1));
 
-        UserNameLb.setIcon(new javax.swing.ImageIcon("C:\\Users\\it\\Downloads\\Assets\\user.png")); // NOI18N
+        UserNameLb.setIcon(new javax.swing.ImageIcon("C:\\Users\\it\\Downloads\\Assets\\user.png"));
         UserNameLb.setText("jLabel2");
         UserNameLb.setPreferredSize(new java.awt.Dimension(32, 32));
         LeftPanel.add(UserNameLb, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 380, -1, -1));
 
-        PasswordLb.setIcon(new javax.swing.ImageIcon("C:\\Users\\it\\Downloads\\Assets\\password.png")); // NOI18N
+        PasswordLb.setIcon(new javax.swing.ImageIcon("C:\\Users\\it\\Downloads\\Assets\\password.png"));
         PasswordLb.setText("jLabel1");
         PasswordLb.setPreferredSize(new java.awt.Dimension(32, 32));
         LeftPanel.add(PasswordLb, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 450, -1, -1));
 
-        WelcomeMessageLb.setFont(new java.awt.Font("Century Gothic", 1, 28)); // NOI18N
+        WelcomeMessageLb.setFont(new java.awt.Font("Century Gothic", 1, 28));
         WelcomeMessageLb.setForeground(new java.awt.Color(255, 255, 255));
         WelcomeMessageLb.setText("Welcome Back, Ready to Make Sales?");
         LeftPanel.add(WelcomeMessageLb, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, -1, -1));
 
-        SloganLb.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        SloganLb.setFont(new java.awt.Font("Century Gothic", 1, 18));
         SloganLb.setForeground(new java.awt.Color(255, 255, 255));
         SloganLb.setText("Empowering Your Business, Every Day");
         LeftPanel.add(SloganLb, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, -1, -1));
 
-        SystemNameLb.setFont(new java.awt.Font("Century Gothic", 1, 34)); // NOI18N
+        SystemNameLb.setFont(new java.awt.Font("Century Gothic", 1, 34));
         SystemNameLb.setForeground(new java.awt.Color(255, 255, 255));
         SystemNameLb.setText("METRO Point Of Sale System");
         LeftPanel.add(SystemNameLb, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, -1, -1));
 
-        logoLb.setIcon(new javax.swing.ImageIcon("C:\\Users\\it\\Downloads\\Assets\\logo.png")); // NOI18N
+        logoLb.setIcon(new javax.swing.ImageIcon("C:\\Users\\it\\Downloads\\Assets\\logo.png"));
         logoLb.setText("jLabel1");
         logoLb.setPreferredSize(new java.awt.Dimension(64, 64));
         LeftPanel.add(logoLb, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, -1, -1));
 
         UserTypeCb.setBackground(new java.awt.Color(1, 146, 213));
-        UserTypeCb.setFont(new java.awt.Font("Century Gothic", 0, 22)); // NOI18N
+        UserTypeCb.setFont(new java.awt.Font("Century Gothic", 0, 22));
         UserTypeCb.setForeground(new java.awt.Color(255, 255, 255));
-        UserTypeCb.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Admin", "Branch Manager", "Data Entry Operator", "Cashier" }));
+        UserTypeCb.setModel(new javax.swing.DefaultComboBoxModel<>(
+                new String[] { "Admin", "Branch Manager", "Data Entry Operator", "Cashier" }));
         UserTypeCb.setBorder(null);
         UserTypeCb.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         UserTypeCb.setFocusable(false);
@@ -141,45 +144,45 @@ public class LoginScreen extends javax.swing.JFrame {
         Sp3.setForeground(new java.awt.Color(102, 255, 51));
         LeftPanel.add(Sp3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 350, 410, 20));
 
-        UserTypeLb.setIcon(new javax.swing.ImageIcon("C:\\Users\\it\\Downloads\\Assets\\userType.png")); // NOI18N
+        UserTypeLb.setIcon(new javax.swing.ImageIcon("C:\\Users\\it\\Downloads\\Assets\\userType.png"));
         UserTypeLb.setText("jLabel1");
         UserTypeLb.setPreferredSize(new java.awt.Dimension(32, 32));
         LeftPanel.add(UserTypeLb, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, -1, -1));
 
         Background.add(LeftPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 700));
 
-        MainVectorLb.setIcon(new javax.swing.ImageIcon("C:\\Users\\it\\Downloads\\Assets\\loginPageMainVector.png")); // NOI18N
+        MainVectorLb.setIcon(new javax.swing.ImageIcon("C:\\Users\\it\\Downloads\\Assets\\loginPageMainVector.png"));
         Background.add(MainVectorLb, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 170, 300, 350));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(Background, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(Background, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addComponent(Background, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE)));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void UserNameFdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UserNameFdActionPerformed
+    private void UserNameFdActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_UserNameFdActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_UserNameFdActionPerformed
+    }// GEN-LAST:event_UserNameFdActionPerformed
 
-    private void PasswordFdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordFdActionPerformed
+    private void PasswordFdActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_PasswordFdActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_PasswordFdActionPerformed
+    }// GEN-LAST:event_PasswordFdActionPerformed
 
-    private void LoginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginBtnActionPerformed
-          LoginController lg= new LoginController(this);
-          lg.handleLogin();
-    }//GEN-LAST:event_LoginBtnActionPerformed
+    private void LoginBtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_LoginBtnActionPerformed
+        LoginController lg = new LoginController(this);
+        lg.handleLogin();
+    }// GEN-LAST:event_LoginBtnActionPerformed
 
     public String getUsername() {
         return UserNameFd.getText();
@@ -197,16 +200,15 @@ public class LoginScreen extends javax.swing.JFrame {
         javax.swing.JOptionPane.showMessageDialog(this, message);
     }
 
-    
-    
-    
-    
-    public static void main(String args[]) 
-    {
+    public static void main(String args[]) {
         /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+        // <editor-fold defaultstate="collapsed" desc=" Look and feel setting code
+        // (optional) ">
+        /*
+         * If Nimbus (introduced in Java SE 6) is not available, stay with the default
+         * look and feel.
+         * For details see
+         * http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -216,22 +218,26 @@ public class LoginScreen extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(LoginScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginScreen.class.getName()).log(java.util.logging.Level.SEVERE, null,
+                    ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(LoginScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginScreen.class.getName()).log(java.util.logging.Level.SEVERE, null,
+                    ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(LoginScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginScreen.class.getName()).log(java.util.logging.Level.SEVERE, null,
+                    ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(LoginScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginScreen.class.getName()).log(java.util.logging.Level.SEVERE, null,
+                    ex);
         }
-        //</editor-fold>
+        // </editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-//                LoginScreen loginScreen = new LoginScreen();
-//        new LoginController(loginScreen);
-//        loginScreen.setVisible(true);
+                // LoginScreen loginScreen = new LoginScreen();
+                // new LoginController(loginScreen);
+                // loginScreen.setVisible(true);
             }
         });
     }
