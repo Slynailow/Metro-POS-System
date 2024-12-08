@@ -26,6 +26,7 @@ public class LoginModel {
 
                 ResultSet rs = ps.executeQuery();
                 if (rs.next()) {
+                    
                     return true; // User found
                 }
             }
