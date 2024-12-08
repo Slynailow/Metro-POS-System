@@ -10,22 +10,21 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.table.DefaultTableModel;
 
-
 public class DataEntryOperatorScreen extends javax.swing.JFrame {
-    DataEntryOpController dc;  
+    DataEntryOpController dc;
     String userName;
     String branchCode;
-    public DataEntryOperatorScreen(String userName, String branchCode) 
-    {
-        this.userName=userName;
-        this.branchCode= branchCode;
-  
+
+    public DataEntryOperatorScreen(String userName, String branchCode) {
+        this.userName = userName;
+        this.branchCode = branchCode;
+
         initComponents();
         myinit();
-        
-         try {
-            dc= new DataEntryOpController(this);
-           
+
+        try {
+            dc = new DataEntryOpController(this);
+
         } catch (SQLException ex) {
             Logger.getLogger(DataEntryOperatorScreen.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ClassNotFoundException ex) {
@@ -33,14 +32,15 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
         }
     }
 
-    private void myinit()
-    {
-        SloganLb.setText("Lets Make this day Productive, " + userName+"! " + " Branch Code:  " + branchCode);
-        SloganLb1.setText("Lets Make this day Productive, " + userName+"! "+ " Branch Code:  " + branchCode);
-        SloganLb2.setText("Lets Make the digital world Strong," + userName+"! "+ " Branch Code:  " + branchCode);
+    private void myinit() {
+        SloganLb.setText("Lets Make this day Productive, " + userName + "! " + " Branch Code:  " + branchCode);
+        SloganLb1.setText("Lets Make this day Productive, " + userName + "! " + " Branch Code:  " + branchCode);
+        SloganLb2.setText("Lets Make the digital world Strong," + userName + "! " + " Branch Code:  " + branchCode);
     }
+
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         VendorInfoDg = new javax.swing.JDialog();
@@ -116,7 +116,7 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
         VendorInfoDg.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         VendorInfoDg.setTitle("Add Vendor Information");
         VendorInfoDg.setBackground(new java.awt.Color(255, 255, 255));
-        VendorInfoDg.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        VendorInfoDg.setFont(new java.awt.Font("Century Gothic", 0, 12));
         VendorInfoDg.setLocation(new java.awt.Point(0, 0));
         VendorInfoDg.setModal(true);
         VendorInfoDg.setPreferredSize(new java.awt.Dimension(750, 605));
@@ -128,7 +128,7 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
         MainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         VendorEmailTf.setBackground(new java.awt.Color(241, 239, 231));
-        VendorEmailTf.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        VendorEmailTf.setFont(new java.awt.Font("Century Gothic", 0, 24));
         VendorEmailTf.setForeground(new java.awt.Color(51, 51, 51));
         VendorEmailTf.setBorder(null);
         VendorEmailTf.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
@@ -136,7 +136,7 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
         MainPanel.add(VendorEmailTf, new org.netbeans.lib.awtextra.AbsoluteConstraints(293, 343, -1, -1));
 
         VendorNameTf.setBackground(new java.awt.Color(241, 239, 231));
-        VendorNameTf.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        VendorNameTf.setFont(new java.awt.Font("Century Gothic", 0, 24));
         VendorNameTf.setForeground(new java.awt.Color(51, 51, 51));
         VendorNameTf.setBorder(null);
         VendorNameTf.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
@@ -149,7 +149,7 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
         MainPanel.add(VendorNameTf, new org.netbeans.lib.awtextra.AbsoluteConstraints(293, 164, -1, -1));
 
         VendorContactTf.setBackground(new java.awt.Color(241, 239, 231));
-        VendorContactTf.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        VendorContactTf.setFont(new java.awt.Font("Century Gothic", 0, 24));
         VendorContactTf.setForeground(new java.awt.Color(51, 51, 51));
         VendorContactTf.setBorder(null);
         VendorContactTf.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
@@ -162,7 +162,7 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
         MainPanel.add(VendorContactTf, new org.netbeans.lib.awtextra.AbsoluteConstraints(293, 222, -1, -1));
 
         VendorAddressTf.setBackground(new java.awt.Color(241, 239, 231));
-        VendorAddressTf.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        VendorAddressTf.setFont(new java.awt.Font("Century Gothic", 0, 24));
         VendorAddressTf.setForeground(new java.awt.Color(51, 51, 51));
         VendorAddressTf.setBorder(null);
         VendorAddressTf.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
@@ -174,22 +174,22 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
         });
         MainPanel.add(VendorAddressTf, new org.netbeans.lib.awtextra.AbsoluteConstraints(293, 279, -1, -1));
 
-        VendorContactLb.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        VendorContactLb.setFont(new java.awt.Font("Century Gothic", 1, 24));
         VendorContactLb.setForeground(new java.awt.Color(51, 51, 51));
         VendorContactLb.setText("Contact Number");
         MainPanel.add(VendorContactLb, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 231, -1, -1));
 
-        VendorNameLb.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        VendorNameLb.setFont(new java.awt.Font("Century Gothic", 1, 24));
         VendorNameLb.setForeground(new java.awt.Color(51, 51, 51));
         VendorNameLb.setText("Vendor Name");
         MainPanel.add(VendorNameLb, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 173, -1, -1));
 
-        VendorAddressLb.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        VendorAddressLb.setFont(new java.awt.Font("Century Gothic", 1, 24));
         VendorAddressLb.setForeground(new java.awt.Color(51, 51, 51));
         VendorAddressLb.setText("Address");
         MainPanel.add(VendorAddressLb, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 283, -1, -1));
 
-        VendorEmailLb.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        VendorEmailLb.setFont(new java.awt.Font("Century Gothic", 1, 24));
         VendorEmailLb.setForeground(new java.awt.Color(51, 51, 51));
         VendorEmailLb.setText("Email");
         MainPanel.add(VendorEmailLb, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 347, -1, -1));
@@ -215,9 +215,9 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
         MainPanel.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 390, 410, 12));
 
         AddBtn.setBackground(new java.awt.Color(51, 204, 255));
-        AddBtn.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        AddBtn.setFont(new java.awt.Font("Century Gothic", 1, 24));
         AddBtn.setForeground(new java.awt.Color(0, 0, 0));
-        AddBtn.setIcon(new javax.swing.ImageIcon("C:\\Users\\it\\Downloads\\Assets\\user.png")); // NOI18N
+        AddBtn.setIcon(new javax.swing.ImageIcon("C:\\Users\\it\\Downloads\\Assets\\user.png"));
         AddBtn.setText("Add");
         AddBtn.setPreferredSize(new java.awt.Dimension(139, 50));
         AddBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -227,7 +227,7 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
         });
         MainPanel.add(AddBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 450, -1, -1));
 
-        SystemLabel.setFont(new java.awt.Font("Century Gothic", 3, 36)); // NOI18N
+        SystemLabel.setFont(new java.awt.Font("Century Gothic", 3, 36));
         SystemLabel.setForeground(new java.awt.Color(0, 0, 0));
         SystemLabel.setText("Metro Point Of Sale System");
         MainPanel.add(SystemLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 60, -1, -1));
@@ -235,13 +235,13 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
         javax.swing.GroupLayout VendorInfoDgLayout = new javax.swing.GroupLayout(VendorInfoDg.getContentPane());
         VendorInfoDg.getContentPane().setLayout(VendorInfoDgLayout);
         VendorInfoDgLayout.setHorizontalGroup(
-            VendorInfoDgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+                VendorInfoDgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(MainPanel, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
         VendorInfoDgLayout.setVerticalGroup(
-            VendorInfoDgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+                VendorInfoDgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(MainPanel, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
 
         VendorInfoDg.getAccessibleContext().setAccessibleParent(RightPanel);
 
@@ -253,9 +253,9 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
         LeftPanel.setPreferredSize(new java.awt.Dimension(300, 1024));
 
         OldVendorBtn.setBackground(new java.awt.Color(1, 146, 213));
-        OldVendorBtn.setFont(new java.awt.Font("Century Gothic", 0, 20)); // NOI18N
+        OldVendorBtn.setFont(new java.awt.Font("Century Gothic", 0, 20));
         OldVendorBtn.setForeground(new java.awt.Color(255, 255, 255));
-        OldVendorBtn.setIcon(new javax.swing.ImageIcon("C:\\Users\\it\\Downloads\\Assets\\oldVendor.png")); // NOI18N
+        OldVendorBtn.setIcon(new javax.swing.ImageIcon("C:\\Users\\it\\Downloads\\Assets\\oldVendor.png"));
         OldVendorBtn.setText("View Old Vendors");
         OldVendorBtn.setBorder(null);
         OldVendorBtn.setBorderPainted(false);
@@ -266,6 +266,7 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 OldVendorBtnMouseEntered(evt);
             }
+
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 OldVendorBtnMouseExited(evt);
             }
@@ -277,9 +278,9 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
         });
 
         NewVendorBtn.setBackground(new java.awt.Color(1, 146, 213));
-        NewVendorBtn.setFont(new java.awt.Font("Century Gothic", 0, 20)); // NOI18N
+        NewVendorBtn.setFont(new java.awt.Font("Century Gothic", 0, 20));
         NewVendorBtn.setForeground(new java.awt.Color(255, 255, 255));
-        NewVendorBtn.setIcon(new javax.swing.ImageIcon("C:\\Users\\it\\Downloads\\Assets\\newVendor.png")); // NOI18N
+        NewVendorBtn.setIcon(new javax.swing.ImageIcon("C:\\Users\\it\\Downloads\\Assets\\newVendor.png"));
         NewVendorBtn.setText("Add New Product");
         NewVendorBtn.setBorderPainted(false);
         NewVendorBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -289,6 +290,7 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 NewVendorBtnMouseEntered(evt);
             }
+
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 NewVendorBtnMouseExited(evt);
             }
@@ -300,9 +302,9 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
         });
 
         ChangePasswordBtn.setBackground(new java.awt.Color(1, 146, 213));
-        ChangePasswordBtn.setFont(new java.awt.Font("Century Gothic", 0, 20)); // NOI18N
+        ChangePasswordBtn.setFont(new java.awt.Font("Century Gothic", 0, 20));
         ChangePasswordBtn.setForeground(new java.awt.Color(255, 255, 255));
-        ChangePasswordBtn.setIcon(new javax.swing.ImageIcon("C:\\Users\\it\\Downloads\\Assets\\password.png")); // NOI18N
+        ChangePasswordBtn.setIcon(new javax.swing.ImageIcon("C:\\Users\\it\\Downloads\\Assets\\password.png"));
         ChangePasswordBtn.setText("  Change Password");
         ChangePasswordBtn.setBorderPainted(false);
         ChangePasswordBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -312,6 +314,7 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 ChangePasswordBtnMouseEntered(evt);
             }
+
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 ChangePasswordBtnMouseExited(evt);
             }
@@ -323,9 +326,9 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
         });
 
         LogOutBtn.setBackground(new java.awt.Color(1, 146, 213));
-        LogOutBtn.setFont(new java.awt.Font("Century Gothic", 0, 20)); // NOI18N
+        LogOutBtn.setFont(new java.awt.Font("Century Gothic", 0, 20));
         LogOutBtn.setForeground(new java.awt.Color(255, 255, 255));
-        LogOutBtn.setIcon(new javax.swing.ImageIcon("C:\\Users\\it\\Downloads\\Assets\\logOut.png")); // NOI18N
+        LogOutBtn.setIcon(new javax.swing.ImageIcon("C:\\Users\\it\\Downloads\\Assets\\logOut.png"));
         LogOutBtn.setText("  Log Out");
         LogOutBtn.setToolTipText("");
         LogOutBtn.setPreferredSize(new java.awt.Dimension(120, 45));
@@ -333,6 +336,7 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 LogOutBtnMouseEntered(evt);
             }
+
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 LogOutBtnMouseExited(evt);
             }
@@ -346,31 +350,41 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
         javax.swing.GroupLayout LeftPanelLayout = new javax.swing.GroupLayout(LeftPanel);
         LeftPanel.setLayout(LeftPanelLayout);
         LeftPanelLayout.setHorizontalGroup(
-            LeftPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(LeftPanelLayout.createSequentialGroup()
-                .addGroup(LeftPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(OldVendorBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(NewVendorBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ChangePasswordBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(LeftPanelLayout.createSequentialGroup()
-                .addGap(49, 49, 49)
-                .addComponent(LogOutBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+                LeftPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(LeftPanelLayout.createSequentialGroup()
+                                .addGroup(LeftPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(OldVendorBtn, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(NewVendorBtn, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(ChangePasswordBtn, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                        .addGroup(LeftPanelLayout.createSequentialGroup()
+                                .addGap(49, 49, 49)
+                                .addComponent(LogOutBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 169,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
         LeftPanelLayout.setVerticalGroup(
-            LeftPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(LeftPanelLayout.createSequentialGroup()
-                .addGap(210, 210, 210)
-                .addComponent(OldVendorBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(NewVendorBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
-                .addComponent(ChangePasswordBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 437, Short.MAX_VALUE)
-                .addComponent(LogOutBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17))
-        );
+                LeftPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(LeftPanelLayout.createSequentialGroup()
+                                .addGap(210, 210, 210)
+                                .addComponent(OldVendorBtn, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(NewVendorBtn, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(27, 27, 27)
+                                .addComponent(ChangePasswordBtn, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 437,
+                                        Short.MAX_VALUE)
+                                .addComponent(LogOutBtn, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(17, 17, 17)));
 
         getContentPane().add(LeftPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -380,88 +394,89 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
 
         OldVendorPanel.setBackground(new java.awt.Color(255, 255, 255));
 
-        SystemNameLb.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+        SystemNameLb.setFont(new java.awt.Font("Century Gothic", 1, 36));
         SystemNameLb.setForeground(new java.awt.Color(51, 51, 51));
         SystemNameLb.setText("Metro Point of Sale System");
 
-        SloganLb.setFont(new java.awt.Font("Century Gothic", 2, 24)); // NOI18N
+        SloganLb.setFont(new java.awt.Font("Century Gothic", 2, 24));
         SloganLb.setForeground(new java.awt.Color(51, 51, 51));
 
-        OldVendorNavLb.setFont(new java.awt.Font("Century Schoolbook", 2, 20)); // NOI18N
+        OldVendorNavLb.setFont(new java.awt.Font("Century Schoolbook", 2, 20));
         OldVendorNavLb.setForeground(new java.awt.Color(153, 153, 255));
         OldVendorNavLb.setText("Old Vendors Window");
 
         VendorDetailsTb.setBackground(new java.awt.Color(204, 204, 255));
-        VendorDetailsTb.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        VendorDetailsTb.setFont(new java.awt.Font("Century Gothic", 0, 24));
         VendorDetailsTb.setForeground(new java.awt.Color(51, 51, 51));
         VendorDetailsTb.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
-            },
-            new String [] {
-                "Vendor ID", "Name", "Address", "Contact Number", "Email"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                new Object[][] {
+                        { null, null, null, null, null },
+                        { null, null, null, null, null },
+                        { null, null, null, null, null },
+                        { null, null, null, null, null },
+                        { null, null, null, null, null },
+                        { null, null, null, null, null },
+                        { null, null, null, null, null },
+                        { null, null, null, null, null },
+                        { null, null, null, null, null },
+                        { null, null, null, null, null },
+                        { null, null, null, null, null },
+                        { null, null, null, null, null },
+                        { null, null, null, null, null },
+                        { null, null, null, null, null },
+                        { null, null, null, null, null },
+                        { null, null, null, null, null },
+                        { null, null, null, null, null },
+                        { null, null, null, null, null },
+                        { null, null, null, null, null },
+                        { null, null, null, null, null },
+                        { null, null, null, null, null },
+                        { null, null, null, null, null },
+                        { null, null, null, null, null },
+                        { null, null, null, null, null },
+                        { null, null, null, null, null },
+                        { null, null, null, null, null },
+                        { null, null, null, null, null },
+                        { null, null, null, null, null },
+                        { null, null, null, null, null },
+                        { null, null, null, null, null },
+                        { null, null, null, null, null },
+                        { null, null, null, null, null },
+                        { null, null, null, null, null },
+                        { null, null, null, null, null },
+                        { null, null, null, null, null },
+                        { null, null, null, null, null },
+                        { null, null, null, null, null },
+                        { null, null, null, null, null },
+                        { null, null, null, null, null },
+                        { null, null, null, null, null },
+                        { null, null, null, null, null }
+                },
+                new String[] {
+                        "Vendor ID", "Name", "Address", "Contact Number", "Email"
+                }) {
+            Class[] types = new Class[] {
+                    java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class,
+                    java.lang.String.class
             };
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
+            boolean[] canEdit = new boolean[] {
+                    false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
+                return types[columnIndex];
             }
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
+                return canEdit[columnIndex];
             }
         });
         VendorDetailsTb.setCellSelectionEnabled(true);
         VendorDetailsTb.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         VendorDetailsTb.setRowHeight(35);
         AllVendors.setViewportView(VendorDetailsTb);
-        VendorDetailsTb.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_INTERVAL_SELECTION);
+        VendorDetailsTb.getColumnModel().getSelectionModel()
+                .setSelectionMode(javax.swing.ListSelectionModel.SINGLE_INTERVAL_SELECTION);
         if (VendorDetailsTb.getColumnModel().getColumnCount() > 0) {
             VendorDetailsTb.getColumnModel().getColumn(0).setResizable(false);
             VendorDetailsTb.getColumnModel().getColumn(0).setPreferredWidth(50);
@@ -475,7 +490,7 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
         }
 
         AddVendorBtn.setBackground(new java.awt.Color(102, 102, 255));
-        AddVendorBtn.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        AddVendorBtn.setFont(new java.awt.Font("Century Gothic", 1, 24));
         AddVendorBtn.setText("Add Vendor");
         AddVendorBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -486,62 +501,68 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
         javax.swing.GroupLayout OldVendorPanelLayout = new javax.swing.GroupLayout(OldVendorPanel);
         OldVendorPanel.setLayout(OldVendorPanelLayout);
         OldVendorPanelLayout.setHorizontalGroup(
-            OldVendorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(OldVendorPanelLayout.createSequentialGroup()
-                .addGap(44, 44, 44)
-                .addGroup(OldVendorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(OldVendorPanelLayout.createSequentialGroup()
-                        .addComponent(SystemNameLb)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 274, Short.MAX_VALUE)
-                        .addComponent(OldVendorNavLb))
-                    .addGroup(OldVendorPanelLayout.createSequentialGroup()
-                        .addGroup(OldVendorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(SloganLb)
-                            .addGroup(OldVendorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(AllVendors, javax.swing.GroupLayout.PREFERRED_SIZE, 909, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(AddVendorBtn)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
+                OldVendorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(OldVendorPanelLayout.createSequentialGroup()
+                                .addGap(44, 44, 44)
+                                .addGroup(OldVendorPanelLayout
+                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(OldVendorPanelLayout.createSequentialGroup()
+                                                .addComponent(SystemNameLb)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+                                                        274, Short.MAX_VALUE)
+                                                .addComponent(OldVendorNavLb))
+                                        .addGroup(OldVendorPanelLayout.createSequentialGroup()
+                                                .addGroup(OldVendorPanelLayout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(SloganLb)
+                                                        .addGroup(OldVendorPanelLayout
+                                                                .createParallelGroup(
+                                                                        javax.swing.GroupLayout.Alignment.TRAILING)
+                                                                .addComponent(AllVendors,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE, 909,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addComponent(AddVendorBtn)))
+                                                .addGap(0, 0, Short.MAX_VALUE)))
+                                .addContainerGap()));
         OldVendorPanelLayout.setVerticalGroup(
-            OldVendorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(OldVendorPanelLayout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addGroup(OldVendorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(SystemNameLb)
-                    .addGroup(OldVendorPanelLayout.createSequentialGroup()
-                        .addGap(9, 9, 9)
-                        .addComponent(OldVendorNavLb)))
-                .addGap(30, 30, 30)
-                .addComponent(SloganLb)
-                .addGap(35, 35, 35)
-                .addComponent(AllVendors, javax.swing.GroupLayout.DEFAULT_SIZE, 760, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
-                .addComponent(AddVendorBtn)
-                .addGap(69, 69, 69))
-        );
+                OldVendorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(OldVendorPanelLayout.createSequentialGroup()
+                                .addGap(26, 26, 26)
+                                .addGroup(OldVendorPanelLayout
+                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(SystemNameLb)
+                                        .addGroup(OldVendorPanelLayout.createSequentialGroup()
+                                                .addGap(9, 9, 9)
+                                                .addComponent(OldVendorNavLb)))
+                                .addGap(30, 30, 30)
+                                .addComponent(SloganLb)
+                                .addGap(35, 35, 35)
+                                .addComponent(AllVendors, javax.swing.GroupLayout.DEFAULT_SIZE, 760, Short.MAX_VALUE)
+                                .addGap(18, 18, 18)
+                                .addComponent(AddVendorBtn)
+                                .addGap(69, 69, 69)));
 
         RightPanel.add(OldVendorPanel, "card2");
 
         NewProductPanel.setBackground(new java.awt.Color(255, 255, 255));
         NewProductPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        SystemNameLb1.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+        SystemNameLb1.setFont(new java.awt.Font("Century Gothic", 1, 36));
         SystemNameLb1.setForeground(new java.awt.Color(51, 51, 51));
         SystemNameLb1.setText("Metro Point of Sale System");
         NewProductPanel.add(SystemNameLb1, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 26, -1, -1));
 
-        SloganLb1.setFont(new java.awt.Font("Century Gothic", 2, 24)); // NOI18N
+        SloganLb1.setFont(new java.awt.Font("Century Gothic", 2, 24));
         SloganLb1.setForeground(new java.awt.Color(51, 51, 51));
         NewProductPanel.add(SloganLb1, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 99, -1, -1));
 
-        NewVendorNavLb.setFont(new java.awt.Font("Century Schoolbook", 2, 20)); // NOI18N
+        NewVendorNavLb.setFont(new java.awt.Font("Century Schoolbook", 2, 20));
         NewVendorNavLb.setForeground(new java.awt.Color(153, 153, 255));
         NewVendorNavLb.setText("Add Product Window");
         NewProductPanel.add(NewVendorNavLb, new org.netbeans.lib.awtextra.AbsoluteConstraints(768, 34, -1, -1));
 
         ProductIdTf.setBackground(new java.awt.Color(204, 204, 204));
-        ProductIdTf.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        ProductIdTf.setFont(new java.awt.Font("Century Gothic", 0, 24));
         ProductIdTf.setForeground(new java.awt.Color(51, 51, 51));
         ProductIdTf.setPreferredSize(new java.awt.Dimension(300, 45));
         ProductIdTf.addActionListener(new java.awt.event.ActionListener() {
@@ -552,20 +573,21 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
         NewProductPanel.add(ProductIdTf, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 260, -1, -1));
 
         PricePerCatonTf.setBackground(new java.awt.Color(204, 204, 204));
-        PricePerCatonTf.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        PricePerCatonTf.setFont(new java.awt.Font("Century Gothic", 0, 24));
         PricePerCatonTf.setForeground(new java.awt.Color(51, 51, 51));
         PricePerCatonTf.setPreferredSize(new java.awt.Dimension(300, 45));
         NewProductPanel.add(PricePerCatonTf, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 710, -1, -1));
 
         ProductCategoryTf.setBackground(new java.awt.Color(204, 204, 204));
-        ProductCategoryTf.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        ProductCategoryTf.setFont(new java.awt.Font("Century Gothic", 0, 24));
         ProductCategoryTf.setForeground(new java.awt.Color(51, 51, 51));
-        ProductCategoryTf.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Health and Care", "Item 2", "Item 3", "Item 4" }));
+        ProductCategoryTf.setModel(new javax.swing.DefaultComboBoxModel<>(
+                new String[] { "Health and Care", "Item 2", "Item 3", "Item 4" }));
         ProductCategoryTf.setPreferredSize(new java.awt.Dimension(300, 45));
         NewProductPanel.add(ProductCategoryTf, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 800, -1, -1));
 
         ProductNameTf.setBackground(new java.awt.Color(204, 204, 204));
-        ProductNameTf.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        ProductNameTf.setFont(new java.awt.Font("Century Gothic", 0, 24));
         ProductNameTf.setForeground(new java.awt.Color(51, 51, 51));
         ProductNameTf.setPreferredSize(new java.awt.Dimension(300, 45));
         ProductNameTf.addActionListener(new java.awt.event.ActionListener() {
@@ -576,13 +598,13 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
         NewProductPanel.add(ProductNameTf, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 350, -1, -1));
 
         OriginalPriceTf.setBackground(new java.awt.Color(204, 204, 204));
-        OriginalPriceTf.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        OriginalPriceTf.setFont(new java.awt.Font("Century Gothic", 0, 24));
         OriginalPriceTf.setForeground(new java.awt.Color(51, 51, 51));
         OriginalPriceTf.setPreferredSize(new java.awt.Dimension(300, 45));
         NewProductPanel.add(OriginalPriceTf, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 430, -1, -1));
 
         SalePriceTf.setBackground(new java.awt.Color(204, 204, 204));
-        SalePriceTf.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        SalePriceTf.setFont(new java.awt.Font("Century Gothic", 0, 24));
         SalePriceTf.setForeground(new java.awt.Color(51, 51, 51));
         SalePriceTf.setPreferredSize(new java.awt.Dimension(300, 45));
         SalePriceTf.addActionListener(new java.awt.event.ActionListener() {
@@ -593,62 +615,62 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
         NewProductPanel.add(SalePriceTf, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 530, -1, -1));
 
         PricePerUnitTf.setBackground(new java.awt.Color(204, 204, 204));
-        PricePerUnitTf.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        PricePerUnitTf.setFont(new java.awt.Font("Century Gothic", 0, 24));
         PricePerUnitTf.setForeground(new java.awt.Color(51, 51, 51));
         PricePerUnitTf.setPreferredSize(new java.awt.Dimension(300, 45));
         NewProductPanel.add(PricePerUnitTf, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 620, -1, -1));
 
         VendorIdCb.setBackground(new java.awt.Color(204, 204, 204));
-        VendorIdCb.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        VendorIdCb.setFont(new java.awt.Font("Century Gothic", 0, 24));
         VendorIdCb.setForeground(new java.awt.Color(51, 51, 51));
         VendorIdCb.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "Item 2", "Item 3", "Item 4" }));
         VendorIdCb.setPreferredSize(new java.awt.Dimension(300, 45));
         NewProductPanel.add(VendorIdCb, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 880, -1, -1));
 
-        proIdLb.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        proIdLb.setFont(new java.awt.Font("Century Gothic", 0, 24));
         proIdLb.setForeground(new java.awt.Color(51, 51, 51));
         proIdLb.setText("Product Id");
         NewProductPanel.add(proIdLb, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, -1, -1));
 
-        proNameLb.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        proNameLb.setFont(new java.awt.Font("Century Gothic", 0, 24));
         proNameLb.setForeground(new java.awt.Color(51, 51, 51));
         proNameLb.setText("Product Name");
         NewProductPanel.add(proNameLb, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 360, -1, -1));
 
-        orginalPriceLb.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        orginalPriceLb.setFont(new java.awt.Font("Century Gothic", 0, 24));
         orginalPriceLb.setForeground(new java.awt.Color(51, 51, 51));
         orginalPriceLb.setText("Original Price");
         NewProductPanel.add(orginalPriceLb, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 440, -1, -1));
 
-        salesPriceLb.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        salesPriceLb.setFont(new java.awt.Font("Century Gothic", 0, 24));
         salesPriceLb.setForeground(new java.awt.Color(51, 51, 51));
         salesPriceLb.setText("Sales Price");
         NewProductPanel.add(salesPriceLb, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 540, -1, -1));
 
-        pricePerUnitLb.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        pricePerUnitLb.setFont(new java.awt.Font("Century Gothic", 0, 24));
         pricePerUnitLb.setForeground(new java.awt.Color(51, 51, 51));
         pricePerUnitLb.setText("Price Per Unit");
         NewProductPanel.add(pricePerUnitLb, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 630, -1, -1));
 
-        pricePerCatonLb.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        pricePerCatonLb.setFont(new java.awt.Font("Century Gothic", 0, 24));
         pricePerCatonLb.setForeground(new java.awt.Color(51, 51, 51));
         pricePerCatonLb.setText("Price Per Caton");
         NewProductPanel.add(pricePerCatonLb, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 720, -1, -1));
 
-        proCategoryLb.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        proCategoryLb.setFont(new java.awt.Font("Century Gothic", 0, 24));
         proCategoryLb.setForeground(new java.awt.Color(51, 51, 51));
         proCategoryLb.setText("Product Category");
         NewProductPanel.add(proCategoryLb, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 810, -1, -1));
 
-        proVendorIdLb.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        proVendorIdLb.setFont(new java.awt.Font("Century Gothic", 0, 24));
         proVendorIdLb.setForeground(new java.awt.Color(51, 51, 51));
         proVendorIdLb.setText("Vendor Id");
         NewProductPanel.add(proVendorIdLb, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 880, -1, -1));
 
         addProductBtn.setBackground(new java.awt.Color(204, 204, 255));
-        addProductBtn.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        addProductBtn.setFont(new java.awt.Font("Century Gothic", 0, 24));
         addProductBtn.setForeground(new java.awt.Color(51, 51, 51));
-        addProductBtn.setIcon(new javax.swing.ImageIcon("C:\\Users\\it\\Downloads\\Assets\\product.png")); // NOI18N
+        addProductBtn.setIcon(new javax.swing.ImageIcon("C:\\Users\\it\\Downloads\\Assets\\product.png"));
         addProductBtn.setText("Add Product");
         addProductBtn.setActionCommand("Add ");
         addProductBtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -662,13 +684,13 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
         });
         NewProductPanel.add(addProductBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 930, 240, 60));
 
-        proIdLb1.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        proIdLb1.setFont(new java.awt.Font("Century Gothic", 0, 24));
         proIdLb1.setForeground(new java.awt.Color(51, 51, 51));
         proIdLb1.setText("Choose Quantity Type");
         NewProductPanel.add(proIdLb1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 260, -1, -1));
 
         quantityTypeCb.setBackground(new java.awt.Color(204, 204, 204));
-        quantityTypeCb.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        quantityTypeCb.setFont(new java.awt.Font("Century Gothic", 0, 24));
         quantityTypeCb.setForeground(new java.awt.Color(51, 51, 51));
         quantityTypeCb.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Unit", "Carton" }));
         quantityTypeCb.setPreferredSize(new java.awt.Dimension(300, 45));
@@ -680,7 +702,7 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
         NewProductPanel.add(quantityTypeCb, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 320, -1, -1));
 
         actualQuantityTf.setBackground(new java.awt.Color(204, 204, 204));
-        actualQuantityTf.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        actualQuantityTf.setFont(new java.awt.Font("Century Gothic", 0, 24));
         actualQuantityTf.setForeground(new java.awt.Color(51, 51, 51));
         actualQuantityTf.setPreferredSize(new java.awt.Dimension(300, 45));
         actualQuantityTf.addActionListener(new java.awt.event.ActionListener() {
@@ -690,12 +712,12 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
         });
         NewProductPanel.add(actualQuantityTf, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 430, -1, -1));
 
-        enterNumberLb.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        enterNumberLb.setFont(new java.awt.Font("Century Gothic", 0, 24));
         enterNumberLb.setForeground(new java.awt.Color(51, 51, 51));
         enterNumberLb.setText("Enter Number:");
         NewProductPanel.add(enterNumberLb, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 390, -1, -1));
 
-        BackgroundImg.setIcon(new javax.swing.ImageIcon("C:\\Users\\it\\Downloads\\Assets\\AbstractIamge.png")); // NOI18N
+        BackgroundImg.setIcon(new javax.swing.ImageIcon("C:\\Users\\it\\Downloads\\Assets\\AbstractIamge.png"));
         BackgroundImg.setText("jLabel1");
         NewProductPanel.add(BackgroundImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 980, -1));
 
@@ -703,19 +725,19 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
 
         ChangePasswordPanel.setBackground(new java.awt.Color(255, 255, 255));
 
-        SystemNameLb2.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+        SystemNameLb2.setFont(new java.awt.Font("Century Gothic", 1, 36));
         SystemNameLb2.setForeground(new java.awt.Color(51, 51, 51));
         SystemNameLb2.setText("Metro Point of Sale System");
 
-        SloganLb2.setFont(new java.awt.Font("Century Gothic", 2, 24)); // NOI18N
+        SloganLb2.setFont(new java.awt.Font("Century Gothic", 2, 24));
         SloganLb2.setForeground(new java.awt.Color(51, 51, 51));
 
-        ChangePasswordLbNav.setFont(new java.awt.Font("Century Schoolbook", 2, 20)); // NOI18N
+        ChangePasswordLbNav.setFont(new java.awt.Font("Century Schoolbook", 2, 20));
         ChangePasswordLbNav.setForeground(new java.awt.Color(153, 153, 255));
         ChangePasswordLbNav.setText("Change Password Window");
 
         OldPasswordFd.setBackground(new java.awt.Color(255, 255, 255));
-        OldPasswordFd.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        OldPasswordFd.setFont(new java.awt.Font("Century Gothic", 0, 24));
         OldPasswordFd.setForeground(new java.awt.Color(1, 146, 213));
         OldPasswordFd.setText("jPasswordField1");
         OldPasswordFd.setBorder(null);
@@ -727,14 +749,14 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
         });
 
         NewPasswordFd.setBackground(new java.awt.Color(255, 255, 255));
-        NewPasswordFd.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        NewPasswordFd.setFont(new java.awt.Font("Century Gothic", 0, 24));
         NewPasswordFd.setForeground(new java.awt.Color(1, 146, 213));
         NewPasswordFd.setText("jPasswordField1");
         NewPasswordFd.setBorder(null);
         NewPasswordFd.setPreferredSize(new java.awt.Dimension(160, 55));
 
         ConfirmPasswordFd.setBackground(new java.awt.Color(255, 255, 255));
-        ConfirmPasswordFd.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        ConfirmPasswordFd.setFont(new java.awt.Font("Century Gothic", 0, 24));
         ConfirmPasswordFd.setForeground(new java.awt.Color(1, 146, 213));
         ConfirmPasswordFd.setText("jPasswordField1");
         ConfirmPasswordFd.setBorder(null);
@@ -745,15 +767,15 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
             }
         });
 
-        OldPasswordLb.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        OldPasswordLb.setFont(new java.awt.Font("Century Gothic", 0, 24));
         OldPasswordLb.setForeground(new java.awt.Color(51, 51, 51));
         OldPasswordLb.setText("Old Password");
 
-        NewPasswordLb.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        NewPasswordLb.setFont(new java.awt.Font("Century Gothic", 0, 24));
         NewPasswordLb.setForeground(new java.awt.Color(51, 51, 51));
         NewPasswordLb.setText("New Password");
 
-        ConfirmPassswordLb.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        ConfirmPassswordLb.setFont(new java.awt.Font("Century Gothic", 0, 24));
         ConfirmPassswordLb.setForeground(new java.awt.Color(51, 51, 51));
         ConfirmPassswordLb.setText("Confirm Password");
 
@@ -764,7 +786,7 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
         SeparatorThree.setForeground(new java.awt.Color(51, 51, 255));
 
         ChangeBtn.setBackground(new java.awt.Color(1, 146, 213));
-        ChangeBtn.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        ChangeBtn.setFont(new java.awt.Font("Century Gothic", 0, 24));
         ChangeBtn.setForeground(new java.awt.Color(255, 255, 255));
         ChangeBtn.setText("Change");
         ChangeBtn.setPreferredSize(new java.awt.Dimension(150, 50));
@@ -772,6 +794,7 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 ChangeBtnMouseEntered(evt);
             }
+
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 ChangeBtnMouseExited(evt);
             }
@@ -785,82 +808,125 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
         javax.swing.GroupLayout ChangePasswordPanelLayout = new javax.swing.GroupLayout(ChangePasswordPanel);
         ChangePasswordPanel.setLayout(ChangePasswordPanelLayout);
         ChangePasswordPanelLayout.setHorizontalGroup(
-            ChangePasswordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ChangePasswordPanelLayout.createSequentialGroup()
-                .addGap(44, 44, 44)
-                .addGroup(ChangePasswordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(ChangePasswordPanelLayout.createSequentialGroup()
-                        .addComponent(SystemNameLb2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 216, Short.MAX_VALUE)
-                        .addComponent(ChangePasswordLbNav)
-                        .addGap(16, 16, 16))
-                    .addGroup(ChangePasswordPanelLayout.createSequentialGroup()
-                        .addComponent(SloganLb2)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-            .addGroup(ChangePasswordPanelLayout.createSequentialGroup()
-                .addGap(96, 96, 96)
-                .addGroup(ChangePasswordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(ChangeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(ChangePasswordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(ChangePasswordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(ChangePasswordPanelLayout.createSequentialGroup()
-                                .addComponent(OldPasswordLb)
-                                .addGap(71, 71, 71)
-                                .addComponent(OldPasswordFd, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(ChangePasswordPanelLayout.createSequentialGroup()
-                                .addComponent(NewPasswordLb)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(ChangePasswordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(ChangePasswordPanelLayout.createSequentialGroup()
-                                        .addGap(6, 6, 6)
-                                        .addComponent(SeparatorTwo))
-                                    .addComponent(NewPasswordFd, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(ChangePasswordPanelLayout.createSequentialGroup()
-                                .addComponent(ConfirmPassswordLb)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(ChangePasswordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(ChangePasswordPanelLayout.createSequentialGroup()
-                                        .addGap(6, 6, 6)
-                                        .addComponent(SeparatorThree))
-                                    .addComponent(ConfirmPasswordFd, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                ChangePasswordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(ChangePasswordPanelLayout.createSequentialGroup()
-                            .addGap(230, 230, 230)
-                            .addComponent(SeparatorOne, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+                                .addGap(44, 44, 44)
+                                .addGroup(ChangePasswordPanelLayout
+                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(ChangePasswordPanelLayout.createSequentialGroup()
+                                                .addComponent(SystemNameLb2)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+                                                        216, Short.MAX_VALUE)
+                                                .addComponent(ChangePasswordLbNav)
+                                                .addGap(16, 16, 16))
+                                        .addGroup(ChangePasswordPanelLayout.createSequentialGroup()
+                                                .addComponent(SloganLb2)
+                                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                        Short.MAX_VALUE))))
+                        .addGroup(ChangePasswordPanelLayout.createSequentialGroup()
+                                .addGap(96, 96, 96)
+                                .addGroup(ChangePasswordPanelLayout
+                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(ChangeBtn, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(ChangePasswordPanelLayout
+                                                .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(ChangePasswordPanelLayout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING,
+                                                                false)
+                                                        .addGroup(ChangePasswordPanelLayout.createSequentialGroup()
+                                                                .addComponent(OldPasswordLb)
+                                                                .addGap(71, 71, 71)
+                                                                .addComponent(OldPasswordFd,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE, 412,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addGroup(ChangePasswordPanelLayout.createSequentialGroup()
+                                                                .addComponent(NewPasswordLb)
+                                                                .addPreferredGap(
+                                                                        javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                        Short.MAX_VALUE)
+                                                                .addGroup(ChangePasswordPanelLayout.createParallelGroup(
+                                                                        javax.swing.GroupLayout.Alignment.LEADING,
+                                                                        false)
+                                                                        .addGroup(ChangePasswordPanelLayout
+                                                                                .createSequentialGroup()
+                                                                                .addGap(6, 6, 6)
+                                                                                .addComponent(SeparatorTwo))
+                                                                        .addComponent(NewPasswordFd,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                412,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                        .addGroup(ChangePasswordPanelLayout.createSequentialGroup()
+                                                                .addComponent(ConfirmPassswordLb)
+                                                                .addPreferredGap(
+                                                                        javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                        Short.MAX_VALUE)
+                                                                .addGroup(ChangePasswordPanelLayout.createParallelGroup(
+                                                                        javax.swing.GroupLayout.Alignment.LEADING,
+                                                                        false)
+                                                                        .addGroup(ChangePasswordPanelLayout
+                                                                                .createSequentialGroup()
+                                                                                .addGap(6, 6, 6)
+                                                                                .addComponent(SeparatorThree))
+                                                                        .addComponent(ConfirmPasswordFd,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                412,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                                .addGroup(ChangePasswordPanelLayout.createSequentialGroup()
+                                                        .addGap(230, 230, 230)
+                                                        .addComponent(SeparatorOne,
+                                                                javax.swing.GroupLayout.PREFERRED_SIZE, 412,
+                                                                javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGap(0, 0, Short.MAX_VALUE)));
         ChangePasswordPanelLayout.setVerticalGroup(
-            ChangePasswordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ChangePasswordPanelLayout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addGroup(ChangePasswordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(SystemNameLb2)
-                    .addGroup(ChangePasswordPanelLayout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addComponent(ChangePasswordLbNav)))
-                .addGap(28, 28, 28)
-                .addComponent(SloganLb2)
-                .addGap(159, 159, 159)
-                .addGroup(ChangePasswordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(OldPasswordFd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(OldPasswordLb))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(SeparatorOne, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24)
-                .addGroup(ChangePasswordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(NewPasswordFd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(NewPasswordLb))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(SeparatorTwo, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24)
-                .addGroup(ChangePasswordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ConfirmPasswordFd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ConfirmPassswordLb))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(SeparatorThree, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(54, 54, 54)
-                .addComponent(ChangeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(392, Short.MAX_VALUE))
-        );
+                ChangePasswordPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(ChangePasswordPanelLayout.createSequentialGroup()
+                                .addGap(26, 26, 26)
+                                .addGroup(ChangePasswordPanelLayout
+                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(SystemNameLb2)
+                                        .addGroup(ChangePasswordPanelLayout.createSequentialGroup()
+                                                .addGap(8, 8, 8)
+                                                .addComponent(ChangePasswordLbNav)))
+                                .addGap(28, 28, 28)
+                                .addComponent(SloganLb2)
+                                .addGap(159, 159, 159)
+                                .addGroup(ChangePasswordPanelLayout
+                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(OldPasswordFd, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(OldPasswordLb))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(SeparatorOne, javax.swing.GroupLayout.PREFERRED_SIZE, 19,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(24, 24, 24)
+                                .addGroup(ChangePasswordPanelLayout
+                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(NewPasswordFd, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(NewPasswordLb))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(SeparatorTwo, javax.swing.GroupLayout.PREFERRED_SIZE, 10,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(24, 24, 24)
+                                .addGroup(ChangePasswordPanelLayout
+                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(ConfirmPasswordFd, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(ConfirmPassswordLb))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(SeparatorThree, javax.swing.GroupLayout.PREFERRED_SIZE, 10,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(54, 54, 54)
+                                .addComponent(ChangeBtn, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(392, Short.MAX_VALUE)));
 
         RightPanel.add(ChangePasswordPanel, "card4");
 
@@ -870,7 +936,7 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-     // Method to show OldVendorPanel
+    // Method to show OldVendorPanel
     private void showOldVendorPanel() {
         OldVendorPanel.setVisible(true);
         NewProductPanel.setVisible(false);
@@ -883,7 +949,8 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
         NewProductPanel.setVisible(true);
         ChangePasswordPanel.setVisible(false);
     }
-    public String getUserName(){
+
+    public String getUserName() {
         return userName;
     }
 
@@ -893,260 +960,237 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
         NewProductPanel.setVisible(false);
         ChangePasswordPanel.setVisible(true);
     }
-    
-    private void OldVendorBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OldVendorBtnActionPerformed
-      showOldVendorPanel();
-    }//GEN-LAST:event_OldVendorBtnActionPerformed
 
-    private void NewVendorBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewVendorBtnActionPerformed
-         showNewVendorPanel();
-    }//GEN-LAST:event_NewVendorBtnActionPerformed
+    private void OldVendorBtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_OldVendorBtnActionPerformed
+        showOldVendorPanel();
+    }// GEN-LAST:event_OldVendorBtnActionPerformed
 
-    private void ChangePasswordBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChangePasswordBtnActionPerformed
+    private void NewVendorBtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_NewVendorBtnActionPerformed
+        showNewVendorPanel();
+    }// GEN-LAST:event_NewVendorBtnActionPerformed
+
+    private void ChangePasswordBtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_ChangePasswordBtnActionPerformed
         showChangePasswordPanel();
-    }//GEN-LAST:event_ChangePasswordBtnActionPerformed
+    }// GEN-LAST:event_ChangePasswordBtnActionPerformed
 
-    private void LogOutBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogOutBtnActionPerformed
+    private void LogOutBtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_LogOutBtnActionPerformed
         dispose();
-    }//GEN-LAST:event_LogOutBtnActionPerformed
+    }// GEN-LAST:event_LogOutBtnActionPerformed
 
-    private void OldVendorBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OldVendorBtnMouseEntered
-         OldVendorBtn.setBackground(new Color(34, 103, 176));
-    }//GEN-LAST:event_OldVendorBtnMouseEntered
+    private void OldVendorBtnMouseEntered(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_OldVendorBtnMouseEntered
+        OldVendorBtn.setBackground(new Color(34, 103, 176));
+    }// GEN-LAST:event_OldVendorBtnMouseEntered
 
-    private void OldVendorBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OldVendorBtnMouseExited
-         OldVendorBtn.setBackground(new Color(1, 146, 213));
-    }//GEN-LAST:event_OldVendorBtnMouseExited
+    private void OldVendorBtnMouseExited(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_OldVendorBtnMouseExited
+        OldVendorBtn.setBackground(new Color(1, 146, 213));
+    }// GEN-LAST:event_OldVendorBtnMouseExited
 
-    private void NewVendorBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NewVendorBtnMouseEntered
+    private void NewVendorBtnMouseEntered(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_NewVendorBtnMouseEntered
         NewVendorBtn.setBackground(new Color(34, 103, 176));
-    }//GEN-LAST:event_NewVendorBtnMouseEntered
+    }// GEN-LAST:event_NewVendorBtnMouseEntered
 
-    private void NewVendorBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NewVendorBtnMouseExited
+    private void NewVendorBtnMouseExited(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_NewVendorBtnMouseExited
         NewVendorBtn.setBackground(new Color(1, 146, 213));
-    }//GEN-LAST:event_NewVendorBtnMouseExited
+    }// GEN-LAST:event_NewVendorBtnMouseExited
 
-    private void ChangePasswordBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ChangePasswordBtnMouseEntered
+    private void ChangePasswordBtnMouseEntered(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_ChangePasswordBtnMouseEntered
         ChangePasswordBtn.setBackground(new Color(34, 103, 176));
-    }//GEN-LAST:event_ChangePasswordBtnMouseEntered
+    }// GEN-LAST:event_ChangePasswordBtnMouseEntered
 
-    private void ChangePasswordBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ChangePasswordBtnMouseExited
-     ChangePasswordBtn.setBackground(new Color(1, 146, 213));
-    }//GEN-LAST:event_ChangePasswordBtnMouseExited
+    private void ChangePasswordBtnMouseExited(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_ChangePasswordBtnMouseExited
+        ChangePasswordBtn.setBackground(new Color(1, 146, 213));
+    }// GEN-LAST:event_ChangePasswordBtnMouseExited
 
-    private void LogOutBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LogOutBtnMouseEntered
+    private void LogOutBtnMouseEntered(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_LogOutBtnMouseEntered
         LogOutBtn.setBackground(new Color(255, 192, 192));
         LogOutBtn.setForeground(Color.BLACK);
-    }//GEN-LAST:event_LogOutBtnMouseEntered
+    }// GEN-LAST:event_LogOutBtnMouseEntered
 
-    private void LogOutBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LogOutBtnMouseExited
+    private void LogOutBtnMouseExited(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_LogOutBtnMouseExited
         LogOutBtn.setBackground(new Color(1, 146, 213));
-    }//GEN-LAST:event_LogOutBtnMouseExited
+    }// GEN-LAST:event_LogOutBtnMouseExited
 
-    private void ConfirmPasswordFdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfirmPasswordFdActionPerformed
+    private void ConfirmPasswordFdActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_ConfirmPasswordFdActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ConfirmPasswordFdActionPerformed
+    }// GEN-LAST:event_ConfirmPasswordFdActionPerformed
 
-    private void OldPasswordFdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OldPasswordFdActionPerformed
+    private void OldPasswordFdActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_OldPasswordFdActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_OldPasswordFdActionPerformed
+    }// GEN-LAST:event_OldPasswordFdActionPerformed
 
-    private void ChangeBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ChangeBtnMouseEntered
+    private void ChangeBtnMouseEntered(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_ChangeBtnMouseEntered
         ChangeBtn.setBackground(Color.red);
-    }//GEN-LAST:event_ChangeBtnMouseEntered
+    }// GEN-LAST:event_ChangeBtnMouseEntered
 
-    private void ChangeBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ChangeBtnMouseExited
-        ChangeBtn.setBackground(new Color(1,146,213));
-    }//GEN-LAST:event_ChangeBtnMouseExited
+    private void ChangeBtnMouseExited(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_ChangeBtnMouseExited
+        ChangeBtn.setBackground(new Color(1, 146, 213));
+    }// GEN-LAST:event_ChangeBtnMouseExited
 
-    private void ChangeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChangeBtnActionPerformed
+    private void ChangeBtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_ChangeBtnActionPerformed
 
-            dc.changePassword();
-    }//GEN-LAST:event_ChangeBtnActionPerformed
+        dc.changePassword();
+    }// GEN-LAST:event_ChangeBtnActionPerformed
 
-    private void AddVendorBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddVendorBtnActionPerformed
-       VendorInfoDg.setVisible(true);
-    }//GEN-LAST:event_AddVendorBtnActionPerformed
+    private void AddVendorBtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_AddVendorBtnActionPerformed
+        VendorInfoDg.setVisible(true);
+    }// GEN-LAST:event_AddVendorBtnActionPerformed
 
-    private void VendorNameTfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VendorNameTfActionPerformed
+    private void VendorNameTfActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_VendorNameTfActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_VendorNameTfActionPerformed
+    }// GEN-LAST:event_VendorNameTfActionPerformed
 
-    private void VendorContactTfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VendorContactTfActionPerformed
+    private void VendorContactTfActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_VendorContactTfActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_VendorContactTfActionPerformed
+    }// GEN-LAST:event_VendorContactTfActionPerformed
 
-    private void AddBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddBtnActionPerformed
+    private void AddBtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_AddBtnActionPerformed
 
-         if(dc.addVendor())
-         {
-             VendorNameTf.setText("");
-             VendorAddressTf.setText("");
-             VendorContactTf.setText("");
-             VendorEmailTf.setText("");
-         }
-    }//GEN-LAST:event_AddBtnActionPerformed
+        if (dc.addVendor()) {
+            VendorNameTf.setText("");
+            VendorAddressTf.setText("");
+            VendorContactTf.setText("");
+            VendorEmailTf.setText("");
+        }
+    }// GEN-LAST:event_AddBtnActionPerformed
 
-    private void ProductIdTfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProductIdTfActionPerformed
+    private void ProductIdTfActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_ProductIdTfActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ProductIdTfActionPerformed
+    }// GEN-LAST:event_ProductIdTfActionPerformed
 
-    private void SalePriceTfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalePriceTfActionPerformed
+    private void SalePriceTfActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_SalePriceTfActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_SalePriceTfActionPerformed
+    }// GEN-LAST:event_SalePriceTfActionPerformed
 
-    private void addProductBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addProductBtnActionPerformed
-         
-            if(dc.addProduct())
-            {
-                ProductIdTf.setText("");
-                ProductNameTf.setText("");
-                PricePerCatonTf.setText("");
-                PricePerUnitTf.setText("");
-                OriginalPriceTf.setText("");
-                SalePriceTf.setText("");   
-            }
-        
-    }//GEN-LAST:event_addProductBtnActionPerformed
+    private void addProductBtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_addProductBtnActionPerformed
 
-    public void showVendors(List<String[]> vendors)
-     {
-            DefaultTableModel tableModel = (DefaultTableModel) VendorDetailsTb.getModel();
-            tableModel.setRowCount(0); // Clear the table before adding new rows
+        if (dc.addProduct()) {
+            ProductIdTf.setText("");
+            ProductNameTf.setText("");
+            PricePerCatonTf.setText("");
+            PricePerUnitTf.setText("");
+            OriginalPriceTf.setText("");
+            SalePriceTf.setText("");
+        }
 
-            for (String[] vendor : vendors) {
-                tableModel.addRow(vendor); // Add each vendor's details as a row
-            }
+    }// GEN-LAST:event_addProductBtnActionPerformed
+
+    public void showVendors(List<String[]> vendors) {
+        DefaultTableModel tableModel = (DefaultTableModel) VendorDetailsTb.getModel();
+        tableModel.setRowCount(0); // Clear the table before adding new rows
+
+        for (String[] vendor : vendors) {
+            tableModel.addRow(vendor); // Add each vendor's details as a row
+        }
     }
-        
-    
-    
 
-    
-    
-    private void VendorAddressTfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VendorAddressTfActionPerformed
+    private void VendorAddressTfActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_VendorAddressTfActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_VendorAddressTfActionPerformed
+    }// GEN-LAST:event_VendorAddressTfActionPerformed
 
-    private void ProductNameTfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProductNameTfActionPerformed
+    private void ProductNameTfActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_ProductNameTfActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ProductNameTfActionPerformed
+    }// GEN-LAST:event_ProductNameTfActionPerformed
 
-    private void quantityTypeCbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quantityTypeCbActionPerformed
+    private void quantityTypeCbActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_quantityTypeCbActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_quantityTypeCbActionPerformed
+    }// GEN-LAST:event_quantityTypeCbActionPerformed
 
-    private void actualQuantityTfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_actualQuantityTfActionPerformed
+    private void actualQuantityTfActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_actualQuantityTfActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_actualQuantityTfActionPerformed
+    }// GEN-LAST:event_actualQuantityTfActionPerformed
 
-    
-    
-        // Getters for JTextField components
-        public String getVendorName() {
-            return VendorNameTf.getText();
-        }
-
-        public String getVendorContact() {
-            return VendorContactTf.getText();
-        }
-
-        public String getVendorAddress() {
-            return VendorAddressTf.getText();
-        }
-
-        public String getVendorEmail() {
-            return VendorEmailTf.getText();
-        }
-
-        // Getters for JComboBox components
-        public String getSelectedVendorId() {
-            return (String) VendorIdCb.getSelectedItem();
-        }
-        
-        // Populate VendorIdCb with vendor IDs
-        public void populateVendorComboBox(List<String> vendorIds) {
-    VendorIdCb.removeAllItems(); // Clear existing items
-    for (String id : vendorIds) {
-        VendorIdCb.addItem(id); // Add each vendor ID
+    // Getters for JTextField components
+    public String getVendorName() {
+        return VendorNameTf.getText();
     }
-}
 
-        
-            
+    public String getVendorContact() {
+        return VendorContactTf.getText();
+    }
 
-        public String getSelectedProductCategory() {
-            return (String) ProductCategoryTf.getSelectedItem();
-        }
+    public String getVendorAddress() {
+        return VendorAddressTf.getText();
+    }
 
-        // Getters for JPasswordField components
-        public String getOldPassword() {
-            return new String(OldPasswordFd.getPassword());
-        }
+    public String getVendorEmail() {
+        return VendorEmailTf.getText();
+    }
 
-        public String getNewPassword() {
-            return new String(NewPasswordFd.getPassword());
-        }
+    // Getters for JComboBox components
+    public String getSelectedVendorId() {
+        return (String) VendorIdCb.getSelectedItem();
+    }
 
-        public String getConfirmPassword() {
-            return new String(ConfirmPasswordFd.getPassword());
+    // Populate VendorIdCb with vendor IDs
+    public void populateVendorComboBox(List<String> vendorIds) {
+        VendorIdCb.removeAllItems(); // Clear existing items
+        for (String id : vendorIds) {
+            VendorIdCb.addItem(id); // Add each vendor ID
         }
+    }
 
-        public String getProductId() {
-            return ProductIdTf.getText();
-        }
+    public String getSelectedProductCategory() {
+        return (String) ProductCategoryTf.getSelectedItem();
+    }
 
-        public String getProductName() {
-            return ProductNameTf.getText();
-        }
+    // Getters for JPasswordField components
+    public String getOldPassword() {
+        return new String(OldPasswordFd.getPassword());
+    }
 
-        public String getOriginalPrice() {
-            return OriginalPriceTf.getText();
-        }
+    public String getNewPassword() {
+        return new String(NewPasswordFd.getPassword());
+    }
 
-        public String getSalePrice() {
-            return SalePriceTf.getText();
-        }
+    public String getConfirmPassword() {
+        return new String(ConfirmPasswordFd.getPassword());
+    }
 
-        public String getPricePerUnit() {
-            return PricePerUnitTf.getText();
-        }
-        
-        public String getPricePerCaton() {
-            return PricePerCatonTf.getText();
-        }
+    public String getProductId() {
+        return ProductIdTf.getText();
+    }
 
-        public String getActualQuantity()
-        {
-            return actualQuantityTf.getText();
-        }
-        
-        public String getSelectedQuantityType() {
-            return (String) quantityTypeCb.getSelectedItem();
-        } 
-        
-        public String getBranchCode()
-        {
-         return branchCode;   
-        }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    public String getProductName() {
+        return ProductNameTf.getText();
+    }
+
+    public String getOriginalPrice() {
+        return OriginalPriceTf.getText();
+    }
+
+    public String getSalePrice() {
+        return SalePriceTf.getText();
+    }
+
+    public String getPricePerUnit() {
+        return PricePerUnitTf.getText();
+    }
+
+    public String getPricePerCaton() {
+        return PricePerCatonTf.getText();
+    }
+
+    public String getActualQuantity() {
+        return actualQuantityTf.getText();
+    }
+
+    public String getSelectedQuantityType() {
+        return (String) quantityTypeCb.getSelectedItem();
+    }
+
+    public String getBranchCode() {
+        return branchCode;
+    }
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+        // <editor-fold defaultstate="collapsed" desc=" Look and feel setting code
+        // (optional) ">
+        /*
+         * If Nimbus (introduced in Java SE 6) is not available, stay with the default
+         * look and feel.
+         * For details see
+         * http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -1156,20 +1200,24 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(DataEntryOperatorScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DataEntryOperatorScreen.class.getName())
+                    .log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(DataEntryOperatorScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DataEntryOperatorScreen.class.getName())
+                    .log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(DataEntryOperatorScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DataEntryOperatorScreen.class.getName())
+                    .log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(DataEntryOperatorScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DataEntryOperatorScreen.class.getName())
+                    .log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
+        // </editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-               // new DataEntryOperatorScreen().setVisible(true);
+                // new DataEntryOperatorScreen().setVisible(true);
             }
         });
     }
