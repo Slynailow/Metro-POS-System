@@ -87,13 +87,6 @@ The Metro Point-of-Sales (POS) System is a Java-based application designed for m
 
 ---
 
-## Future Enhancements
-- Add reporting tools for sales analysis.
-- Include support for multiple payment methods.
-- Enhance UI for mobile compatibility.
-
----
-
 ## License
 This project is licensed under the [MIT License](LICENSE).
 
