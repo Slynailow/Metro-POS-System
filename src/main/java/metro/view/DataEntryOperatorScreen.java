@@ -14,9 +14,11 @@ import javax.swing.table.DefaultTableModel;
 public class DataEntryOperatorScreen extends javax.swing.JFrame {
     DataEntryOpController dc;  
     String userName;
-    public DataEntryOperatorScreen(String userName) 
+    String branchCode;
+    public DataEntryOperatorScreen(String userName, String branchCode) 
     {
         this.userName=userName;
+        this.branchCode= branchCode;
   
         initComponents();
         myinit();
@@ -33,9 +35,9 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
 
     private void myinit()
     {
-        SloganLb.setText("Lets Make this day Productive, " + userName+"!");
-        SloganLb1.setText("Lets Make this day Productive, " + userName+"!");
-        SloganLb2.setText("Lets Make the digital world Strong," + userName+"!");
+        SloganLb.setText("Lets Make this day Productive, " + userName+"! " + " Branch Code:  " + branchCode);
+        SloganLb1.setText("Lets Make this day Productive, " + userName+"! "+ " Branch Code:  " + branchCode);
+        SloganLb2.setText("Lets Make the digital world Strong," + userName+"! "+ " Branch Code:  " + branchCode);
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -91,6 +93,10 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
         proCategoryLb = new javax.swing.JLabel();
         proVendorIdLb = new javax.swing.JLabel();
         addProductBtn = new javax.swing.JButton();
+        proIdLb1 = new javax.swing.JLabel();
+        quantityTypeCb = new javax.swing.JComboBox<>();
+        actualQuantityTf = new javax.swing.JTextField();
+        enterNumberLb = new javax.swing.JLabel();
         BackgroundImg = new javax.swing.JLabel();
         ChangePasswordPanel = new javax.swing.JPanel();
         SystemNameLb2 = new javax.swing.JLabel();
@@ -597,7 +603,7 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
         VendorIdCb.setForeground(new java.awt.Color(51, 51, 51));
         VendorIdCb.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "Item 2", "Item 3", "Item 4" }));
         VendorIdCb.setPreferredSize(new java.awt.Dimension(300, 45));
-        NewProductPanel.add(VendorIdCb, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 870, -1, -1));
+        NewProductPanel.add(VendorIdCb, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 880, -1, -1));
 
         proIdLb.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
         proIdLb.setForeground(new java.awt.Color(51, 51, 51));
@@ -655,6 +661,39 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
             }
         });
         NewProductPanel.add(addProductBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 930, 240, 60));
+
+        proIdLb1.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        proIdLb1.setForeground(new java.awt.Color(51, 51, 51));
+        proIdLb1.setText("Choose Quantity Type");
+        NewProductPanel.add(proIdLb1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 260, -1, -1));
+
+        quantityTypeCb.setBackground(new java.awt.Color(204, 204, 204));
+        quantityTypeCb.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        quantityTypeCb.setForeground(new java.awt.Color(51, 51, 51));
+        quantityTypeCb.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Unit", "Carton" }));
+        quantityTypeCb.setPreferredSize(new java.awt.Dimension(300, 45));
+        quantityTypeCb.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                quantityTypeCbActionPerformed(evt);
+            }
+        });
+        NewProductPanel.add(quantityTypeCb, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 320, -1, -1));
+
+        actualQuantityTf.setBackground(new java.awt.Color(204, 204, 204));
+        actualQuantityTf.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        actualQuantityTf.setForeground(new java.awt.Color(51, 51, 51));
+        actualQuantityTf.setPreferredSize(new java.awt.Dimension(300, 45));
+        actualQuantityTf.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                actualQuantityTfActionPerformed(evt);
+            }
+        });
+        NewProductPanel.add(actualQuantityTf, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 430, -1, -1));
+
+        enterNumberLb.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        enterNumberLb.setForeground(new java.awt.Color(51, 51, 51));
+        enterNumberLb.setText("Enter Number:");
+        NewProductPanel.add(enterNumberLb, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 390, -1, -1));
 
         BackgroundImg.setIcon(new javax.swing.ImageIcon("C:\\Users\\it\\Downloads\\Assets\\AbstractIamge.png")); // NOI18N
         BackgroundImg.setText("jLabel1");
@@ -981,6 +1020,7 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
     }
         
     
+    
 
     
     
@@ -991,6 +1031,14 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
     private void ProductNameTfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProductNameTfActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ProductNameTfActionPerformed
+
+    private void quantityTypeCbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quantityTypeCbActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_quantityTypeCbActionPerformed
+
+    private void actualQuantityTfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_actualQuantityTfActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_actualQuantityTfActionPerformed
 
     
     
@@ -1068,7 +1116,19 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
             return PricePerCatonTf.getText();
         }
 
-
+        public String getActualQuantity()
+        {
+            return actualQuantityTf.getText();
+        }
+        
+        public String getSelectedQuantityType() {
+            return (String) quantityTypeCb.getSelectedItem();
+        } 
+        
+        public String getBranchCode()
+        {
+         return branchCode;   
+        }
     
     
     
@@ -1167,7 +1227,9 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
     private javax.swing.JDialog VendorInfoDg;
     private javax.swing.JLabel VendorNameLb;
     private javax.swing.JTextField VendorNameTf;
+    private javax.swing.JTextField actualQuantityTf;
     private javax.swing.JButton addProductBtn;
+    private javax.swing.JLabel enterNumberLb;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator4;
@@ -1177,8 +1239,10 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
     private javax.swing.JLabel pricePerUnitLb;
     private javax.swing.JLabel proCategoryLb;
     private javax.swing.JLabel proIdLb;
+    private javax.swing.JLabel proIdLb1;
     private javax.swing.JLabel proNameLb;
     private javax.swing.JLabel proVendorIdLb;
+    private javax.swing.JComboBox<String> quantityTypeCb;
     private javax.swing.JLabel salesPriceLb;
     // End of variables declaration//GEN-END:variables
 }
