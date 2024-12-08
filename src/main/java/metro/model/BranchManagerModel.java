@@ -1,81 +1,78 @@
 package com.mycompany.metrosystem.model;
 
-import javax.swing.*;
+import com.mycompany.metrosystem.MySQL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
 
-public class BranchManagerModel {
+public class BranchManagerModel 
+{
 
-    public static boolean checkIfValidBranchID(int branchID) {
-        boolean isValid = false;
-        try (Connection conn = new MySQL().connect()) {
-            String sql = "SELECT * FROM branches WHERE branch_id = ?";
-            PreparedStatement pstmt = conn.prepareStatement(sql);
-            pstmt.setInt(1, branchID);
-            ResultSet rs = pstmt.executeQuery();
-            isValid = rs.next();
-        } catch (Exception ex) {
-            ex.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Error checking branch ID: " + ex.getMessage(), "Database Error",
-                    JOptionPane.ERROR_MESSAGE);
-        }
-        return isValid;
+    Connection conn;
+
+    public BranchManagerModel() throws SQLException, ClassNotFoundException {
+        MySQL mysql = new MySQL("1n-kn.h.filess.io", "Metro_obtainare", "3307", "Metro_obtainare", "0b0cb3dbec8a6597b3406bae44ea54138e90cb69");
+        this.conn = mysql.connect();
     }
 
-    public static boolean emailAlreadyExists(String email) {
-        boolean emailExists = false;
-        try (Connection conn = new MySQL().connect()) {
-            String sql = "SELECT email, 'BranchManager' AS source_table FROM BranchManager WHERE email = ? "
-                    + "UNION SELECT email, 'Cashier' AS source_table FROM Cashier WHERE email = ? "
-                    + "UNION SELECT email, 'DataEntryOperator' AS source_table FROM DataEntryOperator WHERE email = ? "
-                    + "UNION SELECT email, 'Vendor' AS source_table FROM Vendor WHERE email = ?";
-            PreparedStatement pstmt = conn.prepareStatement(sql);
-            pstmt.setString(1, email);
-            pstmt.setString(2, email);
-            pstmt.setString(3, email);
-            pstmt.setString(4, email);
-            ResultSet rs = pstmt.executeQuery();
-            emailExists = rs.next();
-        } catch (Exception ex) {
-            ex.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Error checking email: " + ex.getMessage(), "Database Error",
-                    JOptionPane.ERROR_MESSAGE);
+    public boolean changePassword(String userName, String oldPassword, String newPassword) throws SQLException {
+        String authQuery = "SELECT COUNT(*) FROM BranchManager WHERE name = ? AND password = ?";
+        try (PreparedStatement authStmt = conn.prepareStatement(authQuery)) {
+            authStmt.setString(1, userName);
+            authStmt.setString(2, oldPassword);
+            try (ResultSet rs = authStmt.executeQuery()) {
+                if (rs.next() && rs.getInt(1) == 0) {
+                    return false;
+                }
+            }
         }
-        return emailExists;
+
+        String updateQuery = "UPDATE BranchManager SET password = ? WHERE name = ?";
+        try (PreparedStatement updateStmt = conn.prepareStatement(updateQuery)) {
+            updateStmt.setString(1, newPassword);
+            updateStmt.setString(2, userName);
+            int result = updateStmt.executeUpdate();
+            return result > 0;
+        }
     }
 
-    public static boolean addEmployeeToDatabase(String role, String name, String email, String password,
-                                                 String branchCode, double salary) {
-        if (emailAlreadyExists(email)) {
-            JOptionPane.showMessageDialog(null, "Email already exists!", "Error", JOptionPane.ERROR_MESSAGE);
-            return false;
+    public boolean addCashier(String cashierName, String email, String password, String branchCode, String salary) throws SQLException {
+        String insertQuery = "INSERT INTO Cashier (name, email, password, branchCode, salary) VALUES (?, ?, ?, ?, ?)";
+        try (PreparedStatement insertStmt = conn.prepareStatement(insertQuery)) {
+            insertStmt.setString(1, cashierName);
+            insertStmt.setString(2, email);
+            insertStmt.setString(3, password);
+            insertStmt.setString(4, branchCode);
+            insertStmt.setBigDecimal(5, new java.math.BigDecimal(salary));
+            int result = insertStmt.executeUpdate();
+            return result > 0;
         }
+    }
 
-        if (!checkIfValidBranchID(Integer.parseInt(branchCode))) {
-            JOptionPane.showMessageDialog(null, "Branch Code does not exist!", "Error", JOptionPane.ERROR_MESSAGE);
-            return false;
+    public boolean addDataOperator(String operatorName, String email, String password, String branchCode, String salary) throws SQLException {
+        String insertQuery = "INSERT INTO DataEntryOperator (name, email, password, branchCode, salary) VALUES (?, ?, ?, ?, ?)";
+        try (PreparedStatement insertStmt = conn.prepareStatement(insertQuery)) {
+            insertStmt.setString(1, operatorName);
+            insertStmt.setString(2, email);
+            insertStmt.setString(3, password);
+            insertStmt.setString(4, branchCode);
+            insertStmt.setBigDecimal(5, new java.math.BigDecimal(salary));
+            int result = insertStmt.executeUpdate();
+            return result > 0;
         }
+    }
 
-        String tableName = role.equals("Cashier") ? "Cashier" : "DataEntryOperator";
-        String sql = "INSERT INTO " + tableName + " (name, branchCode, email, password, salary) VALUES (?, ?, ?, ?, ?)";
-
-        try (Connection conn = new MySQL().connect();
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
-
-            pstmt.setString(1, name);
-            pstmt.setString(2, branchCode);
-            pstmt.setString(3, email);
-            pstmt.setString(4, password);
-            pstmt.setDouble(5, salary);
-
-            pstmt.executeUpdate();
-            return true;
-        } catch (Exception ex) {
-            ex.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Error adding to database: " + ex.getMessage(), "Database Error",
-                    JOptionPane.ERROR_MESSAGE);
-            return false;
+    public ArrayList<Integer> getAllBranchIds() throws SQLException {
+        ArrayList<Integer> branches = new ArrayList<>();
+        String selectQuery = "SELECT branch_id FROM branches";
+        try (PreparedStatement selectStmt = conn.prepareStatement(selectQuery);
+             ResultSet rs = selectStmt.executeQuery()) {
+            while (rs.next()) {
+                branches.add(rs.getInt("branch_id"));
+            }
         }
+        return branches;
     }
 }
