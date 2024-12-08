@@ -8,7 +8,8 @@ public class LoginModel {
     private Connection conn;
 
     public LoginModel() throws SQLException, ClassNotFoundException {
-        MySQL mysql = new MySQL("1n-kn.h.filess.io", "Metro_obtainare", "3307", "Metro_obtainare", "0b0cb3dbec8a6597b3406bae44ea54138e90cb69");
+        MySQL mysql = new MySQL("1n-kn.h.filess.io", "Metro_obtainare", "3307", "Metro_obtainare",
+                "0b0cb3dbec8a6597b3406bae44ea54138e90cb69");
         this.conn = mysql.connect(); // Reuse the connection
     }
 
@@ -26,7 +27,7 @@ public class LoginModel {
 
                 ResultSet rs = ps.executeQuery();
                 if (rs.next()) {
-                    
+
                     return true; // User found
                 }
             }
@@ -52,36 +53,33 @@ public class LoginModel {
                 return null;
         }
     }
-    
-    public String getBranchCode(String userType,String username, String password) 
-    {
-    String tableName = getTableName(userType); 
 
-    try {
-        String query = "SELECT branchCode FROM " + tableName + " WHERE name = ? AND password = ?";
-        try (PreparedStatement ps = conn.prepareStatement(query)) {
-            ps.setString(1, username);
-            ps.setString(2, password); // Ensure you're setting the password correctly
+    public String getBranchCode(String userType, String username, String password) {
+        String tableName = getTableName(userType);
 
-            try (ResultSet rs = ps.executeQuery()) {
-                if (rs.next()) {
-                    // Debugging: Print the value of branchCode for testing
-                    String branchCode = rs.getString("branchCode");
-                    System.out.println("BranchCode found: " + branchCode); // This will print the branchCode
-                    return branchCode; // Return the branchCode as a String
-                } else {
-                    // Debugging: If no result found, print a message
-                    System.out.println("No record found for username: " + username);
+        try {
+            String query = "SELECT branchCode FROM " + tableName + " WHERE name = ? AND password = ?";
+            try (PreparedStatement ps = conn.prepareStatement(query)) {
+                ps.setString(1, username);
+                ps.setString(2, password); // Ensure you're setting the password correctly
+
+                try (ResultSet rs = ps.executeQuery()) {
+                    if (rs.next()) {
+                        // Debugging: Print the value of branchCode for testing
+                        String branchCode = rs.getString("branchCode");
+                        System.out.println("BranchCode found: " + branchCode); // This will print the branchCode
+                        return branchCode; // Return the branchCode as a String
+                    } else {
+                        // Debugging: If no result found, print a message
+                        System.out.println("No record found for username: " + username);
+                    }
                 }
             }
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
-    } catch (SQLException e) {
-        e.printStackTrace();
+
+        return null;
     }
-
-    return null; // Return null if no matching record is found
-}
-
-
 
 }
