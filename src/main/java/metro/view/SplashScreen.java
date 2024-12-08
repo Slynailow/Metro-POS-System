@@ -42,8 +42,6 @@ public class SplashScreen extends javax.swing.JFrame {
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated
-    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         Background = new javax.swing.JPanel();
@@ -104,7 +102,7 @@ public class SplashScreen extends javax.swing.JFrame {
 
         pack();
         setLocationRelativeTo(null);
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
     public static void main(String args[]) {
 
@@ -135,7 +133,6 @@ public class SplashScreen extends javax.swing.JFrame {
 
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Background;
     private javax.swing.JLabel BackgroundImage;
     private javax.swing.JLabel HeroImage;
@@ -143,5 +140,4 @@ public class SplashScreen extends javax.swing.JFrame {
     private javax.swing.JLabel LoadingLabel;
     private javax.swing.JLabel LoadingValue;
     private javax.swing.JLabel ProjectName;
-    // End of variables declaration//GEN-END:variables
 }

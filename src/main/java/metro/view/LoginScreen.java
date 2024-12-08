@@ -16,8 +16,7 @@ public class LoginScreen extends javax.swing.JFrame {
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated
-    // Code">//GEN-BEGIN:initComponents
+
     private void initComponents() {
 
         Background = new javax.swing.JPanel();
@@ -169,20 +168,12 @@ public class LoginScreen extends javax.swing.JFrame {
 
         pack();
         setLocationRelativeTo(null);
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
-    private void UserNameFdActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_UserNameFdActionPerformed
-        // TODO add your handling code here:
-    }// GEN-LAST:event_UserNameFdActionPerformed
-
-    private void PasswordFdActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_PasswordFdActionPerformed
-        // TODO add your handling code here:
-    }// GEN-LAST:event_PasswordFdActionPerformed
-
-    private void LoginBtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_LoginBtnActionPerformed
+    private void LoginBtnActionPerformed(java.awt.event.ActionEvent evt) {
         LoginController lg = new LoginController(this);
         lg.handleLogin();
-    }// GEN-LAST:event_LoginBtnActionPerformed
+    }
 
     public String getUsername() {
         return UserNameFd.getText();
@@ -201,15 +192,7 @@ public class LoginScreen extends javax.swing.JFrame {
     }
 
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        // <editor-fold defaultstate="collapsed" desc=" Look and feel setting code
-        // (optional) ">
-        /*
-         * If Nimbus (introduced in Java SE 6) is not available, stay with the default
-         * look and feel.
-         * For details see
-         * http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
-         */
+
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -230,9 +213,7 @@ public class LoginScreen extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(LoginScreen.class.getName()).log(java.util.logging.Level.SEVERE, null,
                     ex);
         }
-        // </editor-fold>
 
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 // LoginScreen loginScreen = new LoginScreen();
@@ -242,7 +223,6 @@ public class LoginScreen extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Background;
     private javax.swing.JLabel ComanyLb;
     private javax.swing.JPanel LeftPanel;
@@ -261,5 +241,5 @@ public class LoginScreen extends javax.swing.JFrame {
     private javax.swing.JLabel UserTypeLb;
     private javax.swing.JLabel WelcomeMessageLb;
     private javax.swing.JLabel logoLb;
-    // End of variables declaration//GEN-END:variables
+
 }

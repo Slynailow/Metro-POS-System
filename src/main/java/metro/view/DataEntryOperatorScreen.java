@@ -39,8 +39,6 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated
-    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         VendorInfoDg = new javax.swing.JDialog();
@@ -934,7 +932,7 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
 
         pack();
         setLocationRelativeTo(null);
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
     // Method to show OldVendorPanel
     private void showOldVendorPanel() {
@@ -961,89 +959,72 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
         ChangePasswordPanel.setVisible(true);
     }
 
-    private void OldVendorBtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_OldVendorBtnActionPerformed
+    private void OldVendorBtnActionPerformed(java.awt.event.ActionEvent evt) {
         showOldVendorPanel();
-    }// GEN-LAST:event_OldVendorBtnActionPerformed
+    }
 
-    private void NewVendorBtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_NewVendorBtnActionPerformed
+    private void NewVendorBtnActionPerformed(java.awt.event.ActionEvent evt) {
         showNewVendorPanel();
-    }// GEN-LAST:event_NewVendorBtnActionPerformed
+    }
 
-    private void ChangePasswordBtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_ChangePasswordBtnActionPerformed
+    private void ChangePasswordBtnActionPerformed(java.awt.event.ActionEvent evt) {
         showChangePasswordPanel();
-    }// GEN-LAST:event_ChangePasswordBtnActionPerformed
+    }
 
-    private void LogOutBtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_LogOutBtnActionPerformed
+    private void LogOutBtnActionPerformed(java.awt.event.ActionEvent evt) {
         dispose();
-    }// GEN-LAST:event_LogOutBtnActionPerformed
+    }
 
-    private void OldVendorBtnMouseEntered(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_OldVendorBtnMouseEntered
+    private void OldVendorBtnMouseEntered(java.awt.event.MouseEvent evt) {
         OldVendorBtn.setBackground(new Color(34, 103, 176));
-    }// GEN-LAST:event_OldVendorBtnMouseEntered
+    }
 
-    private void OldVendorBtnMouseExited(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_OldVendorBtnMouseExited
+    private void OldVendorBtnMouseExited(java.awt.event.MouseEvent evt) {
         OldVendorBtn.setBackground(new Color(1, 146, 213));
-    }// GEN-LAST:event_OldVendorBtnMouseExited
+    }
 
-    private void NewVendorBtnMouseEntered(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_NewVendorBtnMouseEntered
+    private void NewVendorBtnMouseEntered(java.awt.event.MouseEvent evt) {
         NewVendorBtn.setBackground(new Color(34, 103, 176));
-    }// GEN-LAST:event_NewVendorBtnMouseEntered
+    }
 
-    private void NewVendorBtnMouseExited(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_NewVendorBtnMouseExited
+    private void NewVendorBtnMouseExited(java.awt.event.MouseEvent evt) {
         NewVendorBtn.setBackground(new Color(1, 146, 213));
-    }// GEN-LAST:event_NewVendorBtnMouseExited
+    }
 
-    private void ChangePasswordBtnMouseEntered(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_ChangePasswordBtnMouseEntered
+    private void ChangePasswordBtnMouseEntered(java.awt.event.MouseEvent evt) {
         ChangePasswordBtn.setBackground(new Color(34, 103, 176));
-    }// GEN-LAST:event_ChangePasswordBtnMouseEntered
+    }
 
-    private void ChangePasswordBtnMouseExited(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_ChangePasswordBtnMouseExited
+    private void ChangePasswordBtnMouseExited(java.awt.event.MouseEvent evt) {
         ChangePasswordBtn.setBackground(new Color(1, 146, 213));
-    }// GEN-LAST:event_ChangePasswordBtnMouseExited
+    }
 
-    private void LogOutBtnMouseEntered(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_LogOutBtnMouseEntered
+    private void LogOutBtnMouseEntered(java.awt.event.MouseEvent evt) {
         LogOutBtn.setBackground(new Color(255, 192, 192));
         LogOutBtn.setForeground(Color.BLACK);
-    }// GEN-LAST:event_LogOutBtnMouseEntered
+    }
 
-    private void LogOutBtnMouseExited(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_LogOutBtnMouseExited
+    private void LogOutBtnMouseExited(java.awt.event.MouseEvent evt) {
         LogOutBtn.setBackground(new Color(1, 146, 213));
-    }// GEN-LAST:event_LogOutBtnMouseExited
+    }
 
-    private void ConfirmPasswordFdActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_ConfirmPasswordFdActionPerformed
-        // TODO add your handling code here:
-    }// GEN-LAST:event_ConfirmPasswordFdActionPerformed
-
-    private void OldPasswordFdActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_OldPasswordFdActionPerformed
-        // TODO add your handling code here:
-    }// GEN-LAST:event_OldPasswordFdActionPerformed
-
-    private void ChangeBtnMouseEntered(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_ChangeBtnMouseEntered
+    private void ChangeBtnMouseEntered(java.awt.event.MouseEvent evt) {
         ChangeBtn.setBackground(Color.red);
-    }// GEN-LAST:event_ChangeBtnMouseEntered
+    }
 
-    private void ChangeBtnMouseExited(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_ChangeBtnMouseExited
+    private void ChangeBtnMouseExited(java.awt.event.MouseEvent evt) {
         ChangeBtn.setBackground(new Color(1, 146, 213));
-    }// GEN-LAST:event_ChangeBtnMouseExited
+    }
 
-    private void ChangeBtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_ChangeBtnActionPerformed
-
+    private void ChangeBtnActionPerformed(java.awt.event.ActionEvent evt) {
         dc.changePassword();
-    }// GEN-LAST:event_ChangeBtnActionPerformed
+    }
 
-    private void AddVendorBtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_AddVendorBtnActionPerformed
+    private void AddVendorBtnActionPerformed(java.awt.event.ActionEvent evt) {
         VendorInfoDg.setVisible(true);
-    }// GEN-LAST:event_AddVendorBtnActionPerformed
+    }
 
-    private void VendorNameTfActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_VendorNameTfActionPerformed
-        // TODO add your handling code here:
-    }// GEN-LAST:event_VendorNameTfActionPerformed
-
-    private void VendorContactTfActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_VendorContactTfActionPerformed
-        // TODO add your handling code here:
-    }// GEN-LAST:event_VendorContactTfActionPerformed
-
-    private void AddBtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_AddBtnActionPerformed
+    private void AddBtnActionPerformed(java.awt.event.ActionEvent evt) {
 
         if (dc.addVendor()) {
             VendorNameTf.setText("");
@@ -1051,17 +1032,9 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
             VendorContactTf.setText("");
             VendorEmailTf.setText("");
         }
-    }// GEN-LAST:event_AddBtnActionPerformed
+    }
 
-    private void ProductIdTfActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_ProductIdTfActionPerformed
-        // TODO add your handling code here:
-    }// GEN-LAST:event_ProductIdTfActionPerformed
-
-    private void SalePriceTfActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_SalePriceTfActionPerformed
-        // TODO add your handling code here:
-    }// GEN-LAST:event_SalePriceTfActionPerformed
-
-    private void addProductBtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_addProductBtnActionPerformed
+    private void addProductBtnActionPerformed(java.awt.event.ActionEvent evt) {
 
         if (dc.addProduct()) {
             ProductIdTf.setText("");
@@ -1072,7 +1045,7 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
             SalePriceTf.setText("");
         }
 
-    }// GEN-LAST:event_addProductBtnActionPerformed
+    }
 
     public void showVendors(List<String[]> vendors) {
         DefaultTableModel tableModel = (DefaultTableModel) VendorDetailsTb.getModel();
@@ -1082,22 +1055,6 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
             tableModel.addRow(vendor); // Add each vendor's details as a row
         }
     }
-
-    private void VendorAddressTfActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_VendorAddressTfActionPerformed
-        // TODO add your handling code here:
-    }// GEN-LAST:event_VendorAddressTfActionPerformed
-
-    private void ProductNameTfActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_ProductNameTfActionPerformed
-        // TODO add your handling code here:
-    }// GEN-LAST:event_ProductNameTfActionPerformed
-
-    private void quantityTypeCbActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_quantityTypeCbActionPerformed
-        // TODO add your handling code here:
-    }// GEN-LAST:event_quantityTypeCbActionPerformed
-
-    private void actualQuantityTfActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_actualQuantityTfActionPerformed
-        // TODO add your handling code here:
-    }// GEN-LAST:event_actualQuantityTfActionPerformed
 
     // Getters for JTextField components
     public String getVendorName() {
@@ -1183,15 +1140,7 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
     }
 
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        // <editor-fold defaultstate="collapsed" desc=" Look and feel setting code
-        // (optional) ">
-        /*
-         * If Nimbus (introduced in Java SE 6) is not available, stay with the default
-         * look and feel.
-         * For details see
-         * http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
-         */
+
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -1212,9 +1161,6 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(DataEntryOperatorScreen.class.getName())
                     .log(java.util.logging.Level.SEVERE, null, ex);
         }
-        // </editor-fold>
-
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 // new DataEntryOperatorScreen().setVisible(true);
@@ -1222,7 +1168,6 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton AddBtn;
     private javax.swing.JButton AddVendorBtn;
     private javax.swing.JScrollPane AllVendors;
@@ -1292,5 +1237,5 @@ public class DataEntryOperatorScreen extends javax.swing.JFrame {
     private javax.swing.JLabel proVendorIdLb;
     private javax.swing.JComboBox<String> quantityTypeCb;
     private javax.swing.JLabel salesPriceLb;
-    // End of variables declaration//GEN-END:variables
+
 }
