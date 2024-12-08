@@ -13,6 +13,19 @@ public class MySQL {
     private String password;
     private Connection conn;
 
+    public MySQL() {
+        String hostname = "1n-kn.h.filess.io";
+        String database = "Metro_obtainare";
+        String port = "3307";
+        String username = "Metro_obtainare";
+        String password = "0b0cb3dbec8a6597b3406bae44ea54138e90cb69";
+
+        this.username = username;
+        this.password = password;
+
+        this.url = String.format("jdbc:mysql://%s:%s/%s", hostname, port, database);
+    }
+
     /**
      * Prepares the things for the connection.
      * @param hostname
