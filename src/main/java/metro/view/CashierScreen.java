@@ -868,21 +868,6 @@ public class CashierScreen extends javax.swing.JFrame {
         }
     }
 
-    private void metroCardTfActionPerformed(java.awt.event.ActionEvent evt) {
-    }
-
-    private void pointsBtnActionPerformed(java.awt.event.ActionEvent evt) {
-
-    }
-
-    private void generateBillBtnActionPerformed(java.awt.event.ActionEvent evt) {
-        handleGenerateBill();
-    }
-
-    private void customerNameTfActionPerformed(java.awt.event.ActionEvent evt) {
-
-    }
-
     public static void main(String[] args) {
         CashierScreen cs = new CashierScreen("WASEE", "123");
         cs.setVisible(true);
@@ -906,14 +891,6 @@ public class CashierScreen extends javax.swing.JFrame {
 
     private void cashierPanelBtnActionPerformed(java.awt.event.ActionEvent evt) {
         SalesPanel.setVisible(true);
-
-    }// GEN-LAST:event_cashierPanelBtnActionPerformed
-
-    private void OldPasswordFdActionPerformed(java.awt.event.ActionEvent evt) {
-
-    }
-
-    private void ConfirmPasswordFdActionPerformed(java.awt.event.ActionEvent evt) {
 
     }
 
